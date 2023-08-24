@@ -4171,7 +4171,7 @@ blockquote{
 	top:0;
 	left:50%;
 	content:'';
-	width:1px;
+	/* width:1px; */
 	height:100%;
 	position:absolute;
 	background:#e6e6e6;
@@ -5312,4 +5312,198 @@ body.tg-hidescroll{overflow:hidden;}
 	0% {top: 0;}
 	50%{top: -5px;}
 	100% {top:0; }
+}
+
+
+/* pickUpbox */
+#pickUp_main2  {
+    display: flex;
+    justify-content: center; /* centers items on the horizontal line */
+
+    
+}
+
+
+/* overlap boxs*/
+
+.pickUp_box {
+	/* position: absolute; */
+
+	z-index: 1;
+	display: none;  
+	opacity: 0;
+	transition: 0.5s;
+  }
+
+  #box1 {
+	display: block;
+	opacity: 1;
+	z-index: 2;
+  }
+
+
+
+
+
+.pickUp_box .pickUp_nav{
+	/* background-color: #007ee5; */
+	height: 30px;
+	position: relative;
+}
+
+
+
+
+.pickUp_box .backBtn{
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	background-color: #09b83e;	
+}
+.backBtn:hover{
+	cursor: pointer;
+}
+
+.pickUp_box .nextBtn{
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	background-color: #09b83e;	
+	right: 0;
+}
+.nextBtn:hover{
+	cursor: pointer;
+}
+
+.pickUp_box{
+	/* background-color: aliceblue; */
+	border: 1px solid #a9a9a9;
+
+	width: 100%;
+	
+	/* margin: 0 auto; */
+	/* float: left; */
+	padding: 20px 30px 20px 30px;
+	font-size: 15px;
+	line-height: 15px;
+	list-style: none;
+}
+
+/* body */
+
+
+.pickUp_body{
+	height: 500px;
+	margin-bottom:20px;
+	background-color: lightgray;
+}
+
+.pickUp_body01{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.pickUp_body li{
+	list-style: none;
+}
+
+.pickUp_body01 li{
+	width: 46%;
+	margin:0% 2%;
+	list-style: none;
+	background-color: aliceblue;
+}
+.pickUp_body01 li img{
+	height: 200px;
+	width: 100%;
+	background-color: #0077B5;
+}
+/* 2 */
+.pickUp_body02 #map{
+	width: 100%;
+	height: 400px;
+}
+
+
+.pickUp_body03 li{
+	display: flex;
+	width: 100%;
+	height: 120px;
+	background-color: yellowgreen;
+	margin-bottom: 10px;
+}
+.pickUp_body03 li img{
+	width: 120px;
+	margin-left: 20px;
+	background-color: #00aff0;
+}
+
+
+
+
+/* footer */
+.pickUp_footer{
+	display: flex;
+}
+
+.pickUp_footer .progressBar{
+	width: 80%;
+	margin-top: 10px;
+	height: 3px;
+
+	
+}
+.pickUp_footer .progressBar .progressBarFill{
+
+	height: 100%;
+	background-color: #ff7753;
+}
+
+.pickUp_footer .progressText{
+	width: 20%;
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+/* tour detail */
+
+.tourDetail_photoBox{
+	
+	display: flex;
+	width: 100%;
+	height: 300px;
+	margin-top: 20px;
+}
+.tourDetail_photoBox img{
+	width: 33.33%;
+	/* margin: 0.11%; */
+}
+
+.tourDetail_box{
+	width: 60%;
+	margin: 0 auto;
+}
+.tourDetail_box .textBox{
+	font-size: 2.5rem;
+	line-height: 1.5;
+	margin: 40px 0;
+}
+
+.tourDetail_box .imageBox{
+	display: flex;
+	width: 100%;
+	max-height: 300px;
+}
+
+.tourDetail_box .imageBox img{
+	width: 48%;
+	margin: 0 1%;
+	object-fit: contain;
 }

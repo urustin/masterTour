@@ -5358,21 +5358,28 @@ body.tg-hidescroll{overflow:hidden;}
 	position: absolute;
 	width: 30px;
 	height: 30px;
-	background-color: #09b83e;	
+	/* background-color: #09b83e;	 */
+	transform: scaleX(-1);
+	transition: 0.3s;
+	opacity: 0.5;
 }
 .backBtn:hover{
 	cursor: pointer;
+	opacity: 1;
 }
 
 .pickUp_box .nextBtn{
 	position: absolute;
 	width: 30px;
 	height: 30px;
-	background-color: #09b83e;	
+	/* background-color: #09b83e;	 */
 	right: 0;
+	transition: 0.2s;
+	opacity: 0.5;
 }
 .nextBtn:hover{
 	cursor: pointer;
+	opacity: 1;
 }
 
 .pickUp_box{
@@ -5395,7 +5402,7 @@ body.tg-hidescroll{overflow:hidden;}
 .pickUp_body{
 	height: 500px;
 	margin-bottom:20px;
-	background-color: lightgray;
+	/* background-color: lightgray; */
 }
 
 .pickUp_body01{
@@ -5412,11 +5419,17 @@ body.tg-hidescroll{overflow:hidden;}
 	margin:0% 2%;
 	list-style: none;
 	background-color: aliceblue;
+	text-align: center;
+
+}
+.pickUp_body01 li:hover{
+	cursor: pointer;
 }
 .pickUp_body01 li img{
 	height: 200px;
 	width: 100%;
 	background-color: #0077B5;
+	margin-bottom: 8px;
 }
 /* 2 */
 .pickUp_body02 #map{
@@ -5424,19 +5437,129 @@ body.tg-hidescroll{overflow:hidden;}
 	height: 400px;
 }
 
+#locationA{
+	cursor: not-allowed;
+}
+input:disabled{
+	opacity: 0.5;
+}
+
+#distanceResult {
+	position: absolute;
+	text-align: center;
+	top:50%;
+	left: 35%;
+	width: 30%;
+	padding: 10px;
+	background-color: white;
+	/* border: 1px solid rgba(0, 0, 0, 0.2); */
+	box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.20);
+	border-radius: 4px;
+	opacity: 0;
+	transition: 0.8s;
+}
+
 
 .pickUp_body03 li{
 	display: flex;
 	width: 100%;
-	height: 120px;
-	background-color: yellowgreen;
+	height: 250px;
+	/* background-color: yellowgreen; */
 	margin-bottom: 10px;
 }
-.pickUp_body03 li img{
-	width: 120px;
-	margin-left: 20px;
-	background-color: #00aff0;
+.pickUp_body03 li:hover{
+	cursor: pointer;
 }
+.pickUp_body03 li img{
+	width: 350px;
+	/* margin-left: 20px; */
+	object-fit: contain;
+	/* background-color: #00aff0; */
+}
+.pickUp_body03 .text_car{
+	margin-top: 80px;
+}
+
+
+/* body4 */
+
+.pickUp_body04 li{
+	display: flex;
+	width: 100%;
+	height: 100px;
+	margin: 10px 0px;
+	background-color: rgba(73, 196, 230, 0.151);
+	border-radius: 10px;
+	padding-top: 40px;
+	padding-left: 20px;
+	box-shadow: 0px 0px 20px 0px rgba(250, 250, 250, 0.5);
+	transition: 0.3s;
+}
+.pickUp_body04 li:hover{
+	transform: scale(1.05);
+}
+.pickUp_body04 h4{
+	width: 60%;
+}
+.pickUp_body04 .box_value{
+	display: flex;
+}
+.pickUp_body04 .box_value label{
+	margin : 0 10px;
+	cursor: pointer;
+}
+.pickUp_body04 .box_value input{
+	cursor: pointer;
+}
+
+
+
+.pickUp_body04 button{
+	line-height: 0;
+	width: 20px;
+	height: 20px;
+	background-color: rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+}
+.pickUp_body04 span{
+	line-height: 20px;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	margin : 0 2px;
+
+}
+.pickUp_body04 input{
+	height: 20px;
+}
+
+
+
+.pickUp_box04 .optionConfirm{
+	display: block;
+	
+	background-color: rgba(0, 0, 0, 0.10);
+	width: 100px;
+	height: 30px;
+	margin: 20px auto;
+	/* margin-top: 30px; */
+}
+
+.pickUp_body05 h4{
+	padding-top: 200px;
+}
+
+.pickUp_body05 .pickUp_contactBtn{
+	display: block;
+	background-color: rgba(255, 147, 69, 0.974);
+	border-radius: 10px;
+	color: white;
+	width: 30%;
+	height: 30px;
+	margin: 0 auto;
+	margin-top: 200px;
+}
+
 
 
 

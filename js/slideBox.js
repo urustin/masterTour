@@ -1,3 +1,10 @@
+const a = document.querySelectorAll(".nextBtn img");
+const b = document.querySelectorAll(".backBtn img");
+
+a.forEach((item)=>{item.src = "/images/icons/right-arrow2.png"});
+b.forEach((item)=>{item.src = "/images/icons/right-arrow2.png"});
+
+
 function showNextBox(currentBox) {
     // 현재 박스를 숨기고
     document.getElementById(`box${currentBox}`).style.opacity = '0';
@@ -19,7 +26,7 @@ function showNextBox(currentBox) {
   }
   
 
-  function showPreviousBox(currentBox) {
+function showPreviousBox(currentBox) {
 
     // 현재 박스를 숨기고
     document.getElementById(`box${currentBox}`).style.opacity = '0';
@@ -38,3 +45,6 @@ function showNextBox(currentBox) {
     }
   }
   
+
+window.showNextBox = showNextBox;
+window.showPreviousBox = showPreviousBox;

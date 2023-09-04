@@ -6,8 +6,17 @@ let map;
 let service;
 let autocompleteA;
 let autocompleteB;
+let directionsService;
+let directionsRenderer;
 
-let temp;
+
+//body3
+let carType;
+
+// body4
+//추가타입 입력
+let result = [];
+
 
 function initMap() {
     
@@ -15,13 +24,20 @@ function initMap() {
     map = new google.maps.Map(document.getElementById("map"), {
         center: center,
         zoom: 8,
+        disableDefaultUI: true,
     });
+
+    directionsService = new google.maps.DirectionsService();
+    directionsRenderer = new google.maps.DirectionsRenderer();
+    directionsRenderer.setMap(map);
+
 
     // Setting up the Autocomplete feature
     autocompleteA = new google.maps.places.Autocomplete(document.getElementById('locationA'));
     autocompleteB = new google.maps.places.Autocomplete(document.getElementById('locationB'));
 
     service = new google.maps.DistanceMatrixService();
+
 }
 
 
@@ -39,7 +55,7 @@ let airportList = [
     { lat: -47.6733, lng: 144.8433 },
 ];
 
-
+//body1 - pick the airport
 document.getElementById('airportList').addEventListener('click', function(event) {
     // Ensure that only list items are considered
 
@@ -52,49 +68,73 @@ document.getElementById('airportList').addEventListener('click', function(event)
         airportName = selectedAirport.trim(); // remove potential extra spaces
         document.getElementById('locationA').value = airportName;
         // Further logic can be added here
+        // Autocomplete 객체를 업데이트
+        changeLocationA();
+        showNextBox(1);
+        
     }
 });
+
+//body3 - pick the car type
+document.querySelector('.pickUp_body03').addEventListener('click', function(event) {
+    // Ensure that only list items are considered
+    if (event.target.parentElement.tagName.toLowerCase() === 'li') {
+        const selectedValue = event.target.parentElement.getAttribute('data-value');
+        carType = selectedValue;
+        showNextBox(3);
+        result.push(carType);
+    }
+});
+
+//body4 - additional Option
+document.querySelector('.optionConfirm').addEventListener('click', function() {
+    // Ensure that only list items are considered
+    const carrierCount = document.getElementById('carrierNumber').innerText;
+    const carseatValue = document.querySelector('input[name="carseat"]:checked').value;
+    const boosterValue = document.querySelector('input[name="booster"]:checked').value;
+    
+    result = [...result, carrierCount, carseatValue, boosterValue];
+
+
+    showNextBox(4);
+    console.log(result);
+});
+
+let carrierCount = 0; // 초기값
+
+function increase() {
+  carrierCount++;
+  document.getElementById('carrierNumber').innerText = carrierCount;
+}
+
+function decrease() {
+  if(carrierCount > 0) {
+    carrierCount--;
+    document.getElementById('carrierNumber').innerText = carrierCount;
+  }
+}
 
 
 //set airport as locationA
 //reset
-document.getElementById('locationA').focus();
 
 
 function changeLocationA() {
 
-    // console.log("A");
-    
+    // Initialize AutocompleteService
+    const autocompleteService = new google.maps.places.AutocompleteService();
 
-    const inputA = document.getElementById('locationA');
-    
-    
-    if (autocompleteA) {
-        google.maps.event.clearInstanceListeners(autocompleteA);
-    }
-    autocompleteA = new google.maps.places.Autocomplete(inputA);
-    inputA.value = airportName; // input 필드에 airportName을 설정합니
-    inputA.focus();
-
-    // inputA.click();
-    // const firstOption = document.querySelectordocument.querySelector("body > div:nth-child(29) > div:nth-child(1) > span.pac-item-query > span")
-    // firstOption.click();
-    const c = document.querySelectorAll(".pac-container");
-    for(let i of c){
-        i.style.opacity = "0";
-    }
-   
-
-    setTimeout(()=>{
-        
-        
-        const a = document.querySelector(".pac-matched");
-        const b = document.querySelector(".pac-item :nth-child(3)");
-        
-        temp=a.innerText +" "+ b.innerText;
-        console.log(temp);
-        // inputA.blur();
-    },400)
+    // Get place predictions
+    autocompleteService.getPlacePredictions({
+    input: airportName,
+    // additional parameters like types, location, radius etc.
+    }, function(predictions, status) {
+       console.log(status);
+        if (status === google.maps.places.PlacesServiceStatus.OK) {
+            console.log(predictions[0].description);
+            document.getElementById('locationA').value = predictions[0].description;
+        }
+    });
 
 }
 
@@ -109,9 +149,9 @@ function changeLocationA() {
 function calculateDistance() {
 
     // const origin = "Melbourne Airport (MEL), 아리벌 드라이브 멜버른 에어포트 빅토리아 주 오스트레일리아";
-    const origin = temp;
+    const origin = document.getElementById('locationA').value;
     const destination = document.getElementById('locationB').value;
-    console.log(destination);
+
     service.getDistanceMatrix({
         origins: [origin],
         destinations: [destination],
@@ -119,11 +159,16 @@ function calculateDistance() {
         unitSystem: google.maps.UnitSystem.METRIC
     }, (response, status) => {
         if (status === 'OK') {
-            console.log(response);
     
             if (response.rows[0] && response.rows[0].elements[0] && response.rows[0].elements[0].distance) {
                 let distance = response.rows[0].elements[0].distance.text;
                 document.getElementById('distanceResult').innerHTML = 'Distance: ' + distance;
+                document.getElementById('distanceResult').style="opacity:1;";
+                result.push(distance);
+                setTimeout(()=>{
+                    document.getElementById('distanceResult').style="opacity:0;";
+                    showNextBox(2);
+                },3000);
             } else {
                 console.log("Could not find distance information.");
                 alert("Could not find distance information.");
@@ -133,7 +178,26 @@ function calculateDistance() {
             alert('Error was: ' + status);
         }
     });
+
+  // Draw the route on the map
+    let request = {
+        origin: origin,
+        destination: destination,
+        travelMode: 'DRIVING'
+    };
+
+    directionsService.route(request, function(response, status) {
+        if (status === 'OK') {
+            directionsRenderer.setDirections(response);
+        }
+    });
+
 }
+
+
+
+
+
 
 
 // change the screen after B picked

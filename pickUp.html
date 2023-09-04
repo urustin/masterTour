@@ -183,13 +183,13 @@
 												</div>
 												<ul class="pickUp_body02 pickUp_body">
 													<div>
-														<input type="text" id="locationA" placeholder="Enter first location" style="opacity: 0;" >
+														<input type="text" id="locationA" placeholder="Enter first location" disabled >
 														<input type="text" id="locationB" placeholder="Enter second location">
+														
 														<button onclick="calculateDistance()">Calculate Distance</button>
 													</div>
 													<div id="map"></div>
 													<div id="distanceResult"></div>
-													<button>confirm</button>
 												</ul>
 												<div class="pickUp_footer">
 													<div class="progressBar">
@@ -212,10 +212,23 @@
 													<h2>Ride?</h2>
 												</div>
 												<ul class="pickUp_body03 pickUp_body">
-													<li><img src="" alt="">car 1</li>
-													<li><img src="" alt="">car 2</li>
-													<li><img src="" alt="">car 3</li>
-													<li><img src="" alt="">car 4</li>
+													<li data-value="1">
+														<img src="/images/car/honda@2x1.png" alt="">
+														<div class="text_car">
+															<h3>Honda Oddysey</h3>
+															<h4>8인승</h4>
+														</div>
+													
+													</li>
+													<li data-value="2">
+														<img src="/images/car/kia@2x1.png" alt="">
+														<div class="text_car">
+															<h3>Kia Carnival</h3>
+															<h4>7인승</h4>
+														</div>
+														
+													</li>
+
 
 												</ul>
 												<div class="pickUp_footer">
@@ -239,12 +252,38 @@
 													<h2>Else?</h2>
 												</div>
 												<ul class="pickUp_body04 pickUp_body">
-													<li><img src="" alt="">option 1</li>
-													<li><img src="" alt="">option 2</li>
-													<li><img src="" alt="">option 3</li>
-													<li><img src="" alt="">option 4</li>
+													<li data-type="">
+														<h4>캐리어는 총 몇개이신가요?</h4>
+														<div class="box_value">
+														  <button onclick="decrease()">-</button>
+														  <span id="carrierNumber">0</span>
+														  <button onclick="increase()">+</button>
+														</div>
+													  </li>
+													<li data-type="">
 
+														<h4>카시트를 이용하시나요?</h4>
+														<div class="box_value">
+															<label for="carseat1">네</label>
+															<input type="radio" id="carseat1" name="carseat" value="1">
+															<label for="carseat0">아니요</label>
+															<input type="radio" id="carseat0" name="carseat" value="0" checked>
+														</div>
+														
+													</li>
+													<li data-type="">
+														<h4>부스터를 이용하시나요?</h4>
+														<div class="box_value">
+															<label for="booster1">네</label>
+															<input type="radio" id="booster1" name="booster" value="1">
+															<label for="booster0">아니요</label>
+															<input type="radio" id="booster0" name="booster" value="0" checked>
+														</div>
+													</li>
+													<li data-type="">option 4</li>
+													<button class="optionConfirm">제출하기</button>
 												</ul>
+												
 												<div class="pickUp_footer">
 													<div class="progressBar">
 														<div class="progressBarFill" style="width: 100%;"></div>
@@ -264,11 +303,14 @@
 												</div>
 												<div class="pickUp_header">
 													<h2>Result</h2>
+
+													
 												</div>
-												<ul class="pickUp_body05 pickUp_body">
+												<div class="pickUp_body05 pickUp_body">
+													<h4>예상금액 : </h4>
+													<button class="pickUp_contactBtn">예약하러 가기</button>
 
-
-												</ul>
+												</div>
 												<div class="pickUp_footer">
 													<div class="progressBar">
 														<div class="progressBarFill" style="width: 100%;"></div>

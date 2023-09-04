@@ -735,3 +735,58 @@
 	}
 }
 @media (max-width:320px){}
+
+
+/* add */
+@media (max-width:568px){
+	#pickUp_main2{
+		/* background-color: blue; */
+		height: 80vh;
+	}
+	.pickUp_nav{
+		height: 7vh;
+	}
+	.pickUp_header{
+		height: 7vh;
+	}
+	.pickUp_header h2{
+		font-size: 2rem;
+		margin-bottom: 20px;
+	}
+	.pickUp_box{
+		height: 80vh;
+	}
+	.pickUp_body{
+		height: 59vh;
+	}
+	.pickUp_footer{
+		height: 7vh;
+	}
+	.pickUp_body01 li{
+
+	}
+	.pickUp_body01 li img{
+		height: 23vh;
+	}
+	.pickUp_body03 li{
+		height: 25vh;
+		display: block;
+	}
+	.pickUp_body03 img{
+		height: 18vh;
+		margin-bottom: -80px;
+	}
+	.pickUp_body03 div h3, h4{
+		font-size: 1.5rem;
+		text-align: center;
+	}
+
+	.pickUp_body04 li{
+		height: 10vh;
+		font-size: 1.2rem;
+		padding-top: 30px;
+	}
+	.pickUp_body04 h4{
+		font-size: 1.5rem;
+	}
+}

@@ -97,7 +97,8 @@ document.querySelector('.optionConfirm').addEventListener('click', function() {
 
 
     showNextBox(4);
-    console.log(result);
+
+    document.querySelector("#expectation").innerText = "예상금액 : "+ result;
 });
 
 let carrierCount = 0; // 초기값

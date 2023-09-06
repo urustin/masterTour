@@ -5437,7 +5437,20 @@ body.tg-hidescroll{overflow:hidden;}
 	height: 400px;
 }
 
+#calculateBtn{
+	width: 80px;
+	height: 40px;
+	margin: 10px;
+	border-radius: 20px;
+	background-color: rgba(255, 132, 31,0.9);
+	color:white;
+}
+
+
 #locationA{
+	height: 40px;
+	width: 80px;
+	margin: 10px;
 	cursor: not-allowed;
 }
 input:disabled{

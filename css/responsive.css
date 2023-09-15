@@ -769,12 +769,17 @@
 		height: 23vh;
 	}
 	.pickUp_body03 li{
-		height: 25vh;
-		display: block;
+		height: 12vh;
+		/* display: block; */
 	}
-	.pickUp_body03 img{
-		height: 18vh;
-		margin-bottom: -80px;
+	.pickUp_body03 li img{
+		height: 6vh;
+		width: 110px;
+		margin-right: 10px;
+		/* margin-bottom: -80px; */
+	}
+	.pickUp_body03 li .text_car{
+		margin-top: 0px;
 	}
 	.pickUp_body03 div h3, h4{
 		font-size: 1.5rem;
@@ -788,5 +793,11 @@
 	}
 	.pickUp_body04 h4{
 		font-size: 1.5rem;
+	}
+
+	/* popup */
+	#pop_container{
+		width: 90%;
+		left: 5%;
 	}
 }

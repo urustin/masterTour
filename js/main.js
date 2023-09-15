@@ -268,15 +268,61 @@ jQuery(document).on('ready', function() {
 			THEME ACCORDION
 	-------------------------------------- */
 	jQuery(function() {
-		jQuery('.tg-panelcontent').hide();
-		jQuery('.tg-accordion h4:first').addClass('active').next().slideDown('slow');
-		jQuery('.tg-accordion h4').on('click',function() {
-			if(jQuery(this).next().is(':hidden')) {
-				jQuery('.tg-accordion h4').removeClass('active').next().slideUp('slow');
-				jQuery(this).toggleClass('active').next().slideDown('slow');
+		// 스크롤 이동을 위한 새 코드
+		jQuery('.tg-themetabnav li[role="presentation"]').on('click', function(e) {
+			e.preventDefault();
+	
+			const tabId = jQuery(this).find('a').attr('href').substring(1);
+			const tabElement = jQuery(`#${tabId}`);
+	
+			if (tabElement.length > 0) {
+				const position = tabElement.offset().top-180;
+				jQuery('html, body').animate({scrollTop: position}, 'slow');
 			}
 		});
+	
+		// 스크롤 위치에 따른 탭 활성화와 position: fixed 로직
+		const fixedNav = jQuery('.tg-themetabnav');
+		const offset = fixedNav.offset().top-60;
+		jQuery(window).on('scroll', function() {
+			
+			const fixedNav = jQuery('.tg-themetabnav');
+			const placeholder = jQuery('.tg-themetabnav-placeholder');
+			
+
+			// 
+			const scrollPosition = jQuery(window).scrollTop();
+		
+			if (scrollPosition >= offset) {
+				if (!fixedNav.hasClass('fixed')) {
+
+					
+
+					fixedNav.width(fixedNav[0].offsetWidth);
+					fixedNav.css('left', (window.innerWidth - fixedNav[0].offsetWidth) / 2 + 'px');
+
+					fixedNav.addClass('fixed');
+				}
+			} else {
+				fixedNav.removeClass('fixed');
+
+			}
+		
+			jQuery('.tab-pane').each(function() {
+				const paneTop = jQuery(this).offset().top;
+				const paneBottom = paneTop + jQuery(this).height();
+				const tabId = jQuery(this).attr('id');
+				const correspondingTab = jQuery(`.tg-themetabnav li a[href="#${tabId}"]`).parent();
+	
+				if (scrollPosition >= paneTop-180 && scrollPosition < paneBottom) {
+					correspondingTab.addClass('active');
+				} else {
+					correspondingTab.removeClass('active');
+				}
+			});
+		});
 	});
+	
 	/* -------------------------------------
 			MASONRY GALLERY
 	-------------------------------------- */
@@ -431,3 +477,34 @@ jQuery(document).on('ready', function() {
 jQuery(window).on('load', function() {
 	jQuery(".loader").fadeOut(800);
 });
+
+
+/* -------------------------------------
+			LOADER
+-------------------------------------- */
+window.onload = function() {
+	// 팝업을 표시하고 body의 밝기를 조절
+
+	document.getElementById("pop_container").style.display = "block";
+	document.getElementById("tg-wrapper").classList.add("dimmed");
+  
+	// exit 버튼을 누르면 팝업을 숨기고 body의 밝기를 원래대로
+	document.querySelector(".pop_exit").addEventListener("click", function() {
+	  document.getElementById("pop_container").style.display = "none";
+	  document.getElementById("tg-wrapper").classList.remove("dimmed");
+	});
+  };
+
+
+//   휠제한
+document.querySelector('.tourMap_box iframe').addEventListener('load', function() {
+
+	const iframeDocument = this.contentWindow.document;
+	console.log(iframeDocument);
+
+	iframeDocument.addEventListener('dragstart', function(event) {
+	  event.preventDefault();
+	});
+  });
+  
+

@@ -164,12 +164,12 @@ function calculateDistance() {
             if (response.rows[0] && response.rows[0].elements[0] && response.rows[0].elements[0].distance) {
                 let distance = response.rows[0].elements[0].distance.text;
                 document.getElementById('distanceResult').innerHTML = 'Distance: ' + distance;
-                document.getElementById('distanceResult').style="opacity:1;";
+                document.getElementById('resultBox').style="opacity:1;";
                 result.push(distance);
-                setTimeout(()=>{
-                    document.getElementById('distanceResult').style="opacity:0;";
-                    showNextBox(2);
-                },3000);
+                // setTimeout(()=>{
+                //     document.getElementById('distanceResult').style="opacity:0;";
+                //     showNextBox(2);
+                // },3000);
             } else {
                 console.log("Could not find distance information.");
                 alert("Could not find distance information.");

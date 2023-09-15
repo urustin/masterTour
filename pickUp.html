@@ -120,7 +120,6 @@
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 							<h1>Need Pickup?</h1>
 							<h2>We are the Best Choice</h2>
-
 						</div>
 					</div>
 				</div>
@@ -135,8 +134,17 @@
 		<main id="tg-main" class="tg-main tg-sectionspace tg-haslayout">
 			<div id="pickUp_main">
 				<div class="container">
+					<iframe src="http://melbournepickup.com/" frameborder="0"></iframe>
+
+				</div>
+
+
+
+				<div class="container">
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+
 
 
 									<div id ="pickUp_main2" class="row">
@@ -156,10 +164,10 @@
 													<h2>Select The Airport</h2>
 												</div>
 												<ul id="airportList" class="pickUp_body01 pickUp_body">
-													<li data-value="1"><img src="" alt="">Avalon</li>
-													<li data-value="2"><img src="" alt="">Paris</li>
-													<li data-value="3"><img src="" alt="">Melbourne Airport</li>
-													<li data-value="4"><img src="" alt="">Airport 4</li>
+													<li data-value="1"><div><h4>멜버른 공항(툴라마린/아발론공항</h4></div>항공사명</li>
+													<li data-value="2"><div><h4>툴라마린 국내선 국제선 구분</h4></div>항공사명</li>
+													<li data-value="3"><div><h4>국내선 터미널1(콴타스항공)터미널3(버진항공)국제선 - 픽업 장소 동일-퍼블릭 픽업존 1D</h4></div>항공사명</li>
+													<li data-value="4"><div><h4>국내서 터미널4(젯스타) 젯스타 전용 픽업 장소 구역 B</h4></div>항공사명</li>
 												</ul>
 												<div class="pickUp_footer">
 													<div class="progressBar">
@@ -189,7 +197,12 @@
 														<button id="calculateBtn" onclick="calculateDistance()">Calculate</button>
 													</div>
 													<div id="map"></div>
-													<div id="distanceResult"></div>
+													<div id="resultBox">
+														<div id="distanceResult"></div>
+														<button id="confirmBtn" onclick="showNextBox(2)">넘어가기</button>
+													
+													</div>
+													
 												</ul>
 												<div class="pickUp_footer">
 													<div class="progressBar">
@@ -215,18 +228,31 @@
 													<li data-value="1">
 														<img src="/images/car/honda@2x1.png" alt="">
 														<div class="text_car">
-															<h3>Honda Oddysey</h3>
-															<h4>8인승</h4>
+															<h3>Premium</h3>
+															<h4>테슬라 model 3,Y (~인승)</h4>
 														</div>
 													
 													</li>
 													<li data-value="2">
 														<img src="/images/car/kia@2x1.png" alt="">
 														<div class="text_car">
-															<h3>Kia Carnival</h3>
-															<h4>7인승</h4>
+															<h3>Sedan</h3>
+															<h4>도요타 캠리 1~2명 (중형2개 소형 2개)</h4>
 														</div>
-														
+													</li>
+													<li data-value="3">
+														<img src="/images/car/kia@2x1.png" alt="">
+														<div class="text_car">
+															<h3>Suv</h3>
+															<h4>혼다 오딧세이 / 도요타 클루거 3~4명 (대형 2개 중형 2개</h4>
+														</div>
+													</li>
+													<li data-value="4">
+														<img src="/images/car/kia@2x1.png" alt="">
+														<div class="text_car">
+															<h3>Van</h3>
+															<h4>기아 카니발 5~6명(대형 4개 소형 2개)</h4>
+														</div>
 													</li>
 
 
@@ -254,10 +280,25 @@
 												<ul class="pickUp_body04 pickUp_body">
 													<li data-type="">
 														<h4>캐리어는 총 몇개이신가요?</h4>
-														<div class="box_value">
-														  <button onclick="decrease()">-</button>
-														  <span id="carrierNumber">0</span>
-														  <button onclick="increase()">+</button>
+														<div class="box_value carrierBox">
+															<div class="carrier_Big">
+																<h4>대형</h4>
+																<button onclick="decrease()">-</button>
+																<span id="carrierNumber">0</span>
+																<button onclick="increase()">+</button>
+															</div>
+															<div class="carrier_Mid">
+																<h4>중형</h4>
+																<button onclick="decrease()">-</button>
+																<span id="carrierNumber">0</span>
+																<button onclick="increase()">+</button>
+															</div>
+															<div class="carrier_Small">
+																<h4>소형</h4>
+																<button onclick="decrease()">-</button>
+																<span id="carrierNumber">0</span>
+																<button onclick="increase()">+</button>
+															</div>
 														</div>
 													  </li>
 													<li data-type="">
@@ -280,7 +321,15 @@
 															<input type="radio" id="booster0" name="booster" value="0" checked>
 														</div>
 													</li>
-													<li data-type="">option 4</li>
+													<li data-type="">
+														<h4>결제 방식?</h4>
+														<div class="box_value">
+															<label for="payment1">현금</label>
+															<input type="radio" id="payment1" name="payment" value="1">
+															<label for="payment0">카드</label>
+															<input type="radio" id="payment0" name="payment" value="0" checked>
+														</div>
+													</li>
 													<button class="optionConfirm">제출하기</button>
 												</ul>
 												

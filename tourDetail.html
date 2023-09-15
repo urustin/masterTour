@@ -170,15 +170,31 @@
 
 								<div class="tg-sectionspace tg-haslayout">
 									<div class="tg-themetabs tg-bookingtabs">
+										<div class="tg-themetabnav-placeholder"></div>
 										<ul class="tg-themetabnav" role="tablist">
 											<li role="presentation" class="active">
 												<a href="#overview" aria-controls="overview" role="tab" data-toggle="tab">
 													<span>Overview</span>
 												</a>
 											</li>
-											<li role="presentation">
+											<li role="presentation" >
 												<a href="#detail" aria-controls="detail" role="tab" data-toggle="tab">
 													<span>Detail</span>
+												</a>
+											</li>
+											<li role="presentation" >
+												<a href="#map" aria-controls="map" role="tab" data-toggle="tab">
+													<span>map</span>
+												</a>
+											</li>
+											<li role="presentation" >
+												<a href="#photo" aria-controls="photo" role="tab" data-toggle="tab">
+													<span>photo</span>
+												</a>
+											</li>
+											<li role="presentation" >
+												<a href="#review" aria-controls="review" role="tab" data-toggle="tab">
+													<span>review</span>
 												</a>
 											</li>
 										</ul>
@@ -188,16 +204,16 @@
 											<div role="tabpanel" class="tab-pane active tg-overviewtab" id="overview">
 												<div class="tg-bookingdetail">
 													<div class="tg-box">
-														<h2>About this listing</h2>
+														<h2>마스터투어 안내</h2>
 														<div class="tg-description">
-															<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy Etiam porta sem malesuada magna mollis euismod.</p>
+															<p>마스터 투어와 함께 떠나는 더 여유롭고 더 편안하고 더 즐거운여행</p>
 															<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue Sed non mauris vitae;erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo.</p>
 															<p>Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi.</p>
 															<p>Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam.</p>
 														</div>
 													</div>
 													<div class="tg-box">
-														<h2>Guest access</h2>
+														<h2>마스터 프리미엄 투어 서비스 장점</h2>
 														<div class="tg-description">
 															<p>Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam.</p>
 															<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue Sed non mauris vitae;erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
@@ -261,107 +277,152 @@
 												</div>
 											</div>
 											<div role="tabpanel" class="tab-pane tg-itinerary" id="detail">
-												<div class="tourDetail_box">
+												<div class="tourDetail_box tourBox">
+													<h2>그레이트 오션 로드 코스 소개</h2>
 													<div class="textBox">
-														기본적인 투어 코스는 시티 출발(오전8시에서 9시 사이 출발)
-														<br>
-														1.메모리얼 아치(Memorial Arch at Eastern View)
-
+														1. 시티에서 미팅
 													</div>
 													<div class="imageBox">
 														<img src="/images/add3/IMG_0082.jpeg" alt="">
-														<img src="/images/add3/IMG_0085.jpeg" alt="">
+														<div class="imageCaption">
+															[출발 시간 안내] : 아침 7시30분
+															<br>
+															<br>
+															호주, 중국, 한국등 8-9시에 출발하는 타 여행사 보다 일찍 출발, 동선이 겹치지 않아 보다 여유있고 편안하게 진행됩니다.
+경험해보지 않고는 알수 없는 땡스투어의 진행 노하우가 담긴 상품 !!!
+그룹 투어지만 편안한 일정 진행으로 여행의 감동이 두배가 되도록 최선을 다하겠습니다.
+														</div>
 													</div>
 													<div class="textBox">
-														블로그 내용이 들어갈 예정입니다
-														<br>
-														1.메모리얼 아치(Memorial Arch at Eastern View)
-
+														2.메모리얼 아치 (Memorial Arch)
 													</div>
 
 												
 												</div>
 											</div>
 											
+											<div role="tabpanel" class="tab-pane tg-itinerary" id="map">
+												
+												<div class="tourMap_box tourBox">
+													<h2>경로 살펴보기</h2>
+													<div class="mapBlock" onClick="style.pointerEvents='none'"></div>
 
-											<!-- review tab -->
-											<div role="tabpanel" class="tab-pane tg-reviewtab" id="london">
-												<div class="tg-reviewsarea">
-													
-
+													<iframe src="https://www.google.com/maps/d/embed?mid=1AOGvzYSpg5oTASP0EBeeLh5lz64wNes&ehbc=2E312F" height="480"></iframe>
 												</div>
 											</div>
 
-											<!-- gallery -->
-											<div role="tabpanel" class="tab-pane tg-gallerytab" id="india">
-												<div class="tg-gallery">
-													<ul>
+											<div role="tabpanel" class="tab-pane tg-itinerary" id="photo">
+												<section class="tg-sectionspace tg-toppadding tg-haslayout">
+													<div class="container">
+														<div class="row">
+															<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+																<div class="tg-sectionhead tg-sectionheadvtwo">
+																	<div class="tg-sectiontitle">
+																		<h2>사진 살펴보기</h2>
+																	</div>
+																	<div class="tg-description">
+																		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam consectetuer</p>
+																	</div>
+																</div>
+																<div id="tg-populartoursslider" class="tg-populartoursslider tg-populartours tg-populartoursvtwo owl-carousel">
+																	<div class="item tg-populartour">
+																		<figure>
+																			<a href="javascript:void(0);"><img src="images/tours/img-01.jpg" alt="image destinations"></a>
+																		</figure>
+																	</div>
+																	<div class="item tg-populartour">
+																		<figure><a href="javascript:void(0);"><img src="images/tours/img-02.jpg" alt="image destinations"></a></figure>
+																		
+																	</div>
+																	<div class="item tg-populartour">
+																		<figure><a href="javascript:void(0);"><img src="images/tours/img-03.jpg" alt="image destinations"></a></figure>
+																	</div>
+																	<div class="item tg-populartour">
+																		<figure><a href="javascript:void(0);"><img src="images/tours/img-04.jpg" alt="image destinations"></a></figure>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</section>
+											</div>
+
+											<div role="tabpanel" class="tab-pane tg-itinerary" id="review">
+												<div class="tg-comments">
+													<div class="tg-heading tg-headingvtwo">
+														<h2>리뷰 보기</h2>
+													</div>
+													<ul id="tg-comments" class="tg-comments">
 														<li>
-															<figure>
-																<a href="images/gallery/img-01.jpg" data-rel="prettyPhoto[instagram]">
-																	<img src="images/gallery/img-01.jpg" alt="image decruoton">
-																</a>
-															</figure>
+															<div class="tg-comment">
+																<figure><img src="images/avatars/img-03.jpg" alt="image description"></figure>
+																<div class="tg-content">
+																	<div class="tg-commenthead">
+																		<div class="tg-author">
+																			<h3>John Smith</h3>
+																			<time datetime="2017-12-12">December 21, 2017 at 3:04 pm</time>
+																		</div>
+																		<a class="tg-reply" href="javascript:void(0);">reply</a>
+																	</div>
+																	<div class="tg-description">
+																		<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
+																	</div>
+																</div>
+															</div>
 														</li>
 														<li>
-															<figure>
-																<a href="images/gallery/img-02.jpg" data-rel="prettyPhoto[instagram]">
-																	<img src="images/gallery/img-02.jpg" alt="image decruoton">
-																</a>
-															</figure>
-														</li>
-														<li>
-															<figure>
-																<a href="images/gallery/img-03.jpg" data-rel="prettyPhoto[instagram]">
-																	<img src="images/gallery/img-03.jpg" alt="image decruoton">
-																</a>
-															</figure>
-														</li>
-														<li>
-															<figure>
-																<a href="images/gallery/img-04.jpg" data-rel="prettyPhoto[instagram]">
-																	<img src="images/gallery/img-04.jpg" alt="image decruoton">
-																</a>
-															</figure>
-														</li>
-														<li>
-															<figure>
-																<a href="images/gallery/img-05.jpg" data-rel="prettyPhoto[instagram]">
-																	<img src="images/gallery/img-05.jpg" alt="image decruoton">
-																</a>
-															</figure>
-														</li>
-														<li>
-															<figure>
-																<a href="images/gallery/img-06.jpg" data-rel="prettyPhoto[instagram]">
-																	<img src="images/gallery/img-06.jpg" alt="image decruoton">
-																</a>
-															</figure>
-														</li>
-														<li>
-															<figure>
-																<a href="images/gallery/img-07.jpg" data-rel="prettyPhoto[instagram]">
-																	<img src="images/gallery/img-07.jpg" alt="image decruoton">
-																</a>
-															</figure>
-														</li>
-														<li>
-															<figure>
-																<a href="images/gallery/img-08.jpg" data-rel="prettyPhoto[instagram]">
-																	<img src="images/gallery/img-08.jpg" alt="image decruoton">
-																</a>
-															</figure>
-														</li>
-														<li>
-															<figure>
-																<a href="images/gallery/img-09.jpg" data-rel="prettyPhoto[instagram]">
-																	<img src="images/gallery/img-09.jpg" alt="image decruoton">
-																</a>
-															</figure>
+															<div class="tg-comment">
+																<figure><img src="images/avatars/img-03.jpg" alt="image description"></figure>
+																<div class="tg-content">
+																	<div class="tg-commenthead">
+																		<div class="tg-author">
+																			<h3>John Smith</h3>
+																			<time datetime="2017-12-12">December 21, 2017 at 3:04 pm</time>
+																		</div>
+																		<a class="tg-reply" href="javascript:void(0);">reply</a>
+																	</div>
+																	<div class="tg-description">
+																		<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
+																	</div>
+																</div>
+															</div>
 														</li>
 													</ul>
 												</div>
+												<div class="tg-leaveyourcomment">
+													<div class="tg-heading tg-headingvtwo">
+														<h2>리뷰 남기기</h2>
+													</div>
+													<form class="tg-formtheme tg-formleavecomment">
+														<fieldset>
+															<div class="row">
+																<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+																	<div class="form-group">
+																		<input type="text" name="fullname" class="form-control" placeholder="Full Name">
+																	</div>
+																</div>
+																<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+																	<div class="form-group">
+																		<input type="email" name="email" class="form-control" placeholder="Email Address">
+																	</div>
+																</div>
+																<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+																	<div class="form-group">
+																		<textarea placeholder="Your Comment"></textarea>
+																	</div>
+																</div>
+																<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+																	<button class="tg-btn"><span>submit</span></button>
+																</div>
+															</div>
+														</fieldset>
+													</form>
+												</div>
 											</div>
+
+
+											<a id="tourDetail_contactBtn"class="tg-btn" href="https://pf.kakao.com/_lLvqxj"><span>예약하러 가기</span></a>
+
 										</div>
 									</div>
 								</div>

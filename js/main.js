@@ -480,8 +480,9 @@ jQuery(window).on('load', function() {
 
 
 /* -------------------------------------
-			LOADER
+			LOADER End
 -------------------------------------- */
+
 window.onload = function() {
 	// 팝업을 표시하고 body의 밝기를 조절
 

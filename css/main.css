@@ -5336,6 +5336,12 @@ body.tg-hidescroll{overflow:hidden;}
 
 
 /* pickUpbox */
+.pickUp_caution{
+	margin: 60px 0px;
+
+}
+
+
 #pickUp_main2  {
     display: flex;
     justify-content: center; /* centers items on the horizontal line */

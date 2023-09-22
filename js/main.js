@@ -295,17 +295,13 @@ jQuery(document).on('ready', function() {
 		
 			if (scrollPosition >= offset) {
 				if (!fixedNav.hasClass('fixed')) {
-
-					
-
-					fixedNav.width(fixedNav[0].offsetWidth);
-					fixedNav.css('left', (window.innerWidth - fixedNav[0].offsetWidth) / 2 + 'px');
-
+					fixedNav.width(window.innerHeight-60); // 변경: offsetWidth -> offsetHeight
+					fixedNav.css('left', '0px'); // 변경: fixed position에서 left 값을 0으로 설정
 					fixedNav.addClass('fixed');
+					placeholder.css('height','120px');
 				}
 			} else {
 				fixedNav.removeClass('fixed');
-
 			}
 		
 			jQuery('.tab-pane').each(function() {
@@ -313,8 +309,8 @@ jQuery(document).on('ready', function() {
 				const paneBottom = paneTop + jQuery(this).height();
 				const tabId = jQuery(this).attr('id');
 				const correspondingTab = jQuery(`.tg-themetabnav li a[href="#${tabId}"]`).parent();
-	
-				if (scrollPosition >= paneTop-180 && scrollPosition < paneBottom) {
+
+				if (scrollPosition >= paneTop-600 && scrollPosition < paneBottom-500) {
 					correspondingTab.addClass('active');
 				} else {
 					correspondingTab.removeClass('active');
@@ -504,8 +500,8 @@ document.querySelector('.tourMap_box iframe').addEventListener('load', function(
 	console.log(iframeDocument);
 
 	iframeDocument.addEventListener('dragstart', function(event) {
-	  event.preventDefault();
+		event.preventDefault();
 	});
-  });
-  
+});
+
 

@@ -303,7 +303,26 @@
 		font-size: 25px;
 		line-height: 22px;
 	}
-	.tg-themetabnav{display:block;}
+	/* detail nav */
+	.tg-themetabnav{display:none;}
+	/* detail boxes */
+	.tg-bookingdetail2{
+		width: 100%;
+	}
+	.tourBox{
+		width: 100%;
+	}
+	.tourBox .imageBox{
+		display: block;
+		max-height: none;
+		width: 90%;
+		margin: auto;
+	}
+	.tourBox .imageBox img{
+		width: 100%;
+		margin: 0 auto;
+		left:20%;
+	}
 	.tg-themetabnav li{
 		float:left;
 		width:33.33%;

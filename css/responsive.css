@@ -2,6 +2,7 @@
 	.tg-navigation ul li{padding:0 20px;}
 	.tg-populartours .tg-btnroundprev {left: -40px;}
 	.tg-populartours .tg-btnroundnext {right: -40px;}
+	.owl-nav{display: none;}
 }
 @media (max-width:1280px){
 	.tg-posts.tg-blogposts {margin: -70px 0 0;}

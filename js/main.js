@@ -267,58 +267,62 @@ jQuery(document).on('ready', function() {
 	/* -------------------------------------
 			THEME ACCORDION
 	-------------------------------------- */
-	jQuery(function() {
-		// 스크롤 이동을 위한 새 코드
-		jQuery('.tg-themetabnav li[role="presentation"]').on('click', function(e) {
-			e.preventDefault();
+	if(window.location.href.includes("tourDetail")){
+		//only for pickup page
 	
-			const tabId = jQuery(this).find('a').attr('href').substring(1);
-			const tabElement = jQuery(`#${tabId}`);
-	
-			if (tabElement.length > 0) {
-				const position = tabElement.offset().top-180;
-				jQuery('html, body').animate({scrollTop: position}, 'slow');
-			}
-		});
-	
-		// 스크롤 위치에 따른 탭 활성화와 position: fixed 로직
-		const fixedNav = jQuery('.tg-themetabnav');
-		const offset = fixedNav.offset().top-60;
-		jQuery(window).on('scroll', function() {
-			
-			const fixedNav = jQuery('.tg-themetabnav');
-			const placeholder = jQuery('.tg-themetabnav-placeholder');
-			
-
-			// 
-			const scrollPosition = jQuery(window).scrollTop();
+		jQuery(function() {
+			// 스크롤 이동을 위한 새 코드
+			jQuery('.tg-themetabnav li[role="presentation"]').on('click', function(e) {
+				e.preventDefault();
 		
-			if (scrollPosition >= offset) {
-				if (!fixedNav.hasClass('fixed')) {
-					fixedNav.width(window.innerHeight-60); // 변경: offsetWidth -> offsetHeight
-					fixedNav.css('left', '0px'); // 변경: fixed position에서 left 값을 0으로 설정
-					fixedNav.addClass('fixed');
-					placeholder.css('height','120px');
-				}
-			} else {
-				fixedNav.removeClass('fixed');
-			}
+				const tabId = jQuery(this).find('a').attr('href').substring(1);
+				const tabElement = jQuery(`#${tabId}`);
 		
-			jQuery('.tab-pane').each(function() {
-				const paneTop = jQuery(this).offset().top;
-				const paneBottom = paneTop + jQuery(this).height();
-				const tabId = jQuery(this).attr('id');
-				const correspondingTab = jQuery(`.tg-themetabnav li a[href="#${tabId}"]`).parent();
-
-				if (scrollPosition >= paneTop-600 && scrollPosition < paneBottom-500) {
-					correspondingTab.addClass('active');
-				} else {
-					correspondingTab.removeClass('active');
+				if (tabElement.length > 0) {
+					const position = tabElement.offset().top-180;
+					jQuery('html, body').animate({scrollTop: position}, 'slow');
 				}
 			});
+		
+			// 스크롤 위치에 따른 탭 활성화와 position: fixed 로직
+			const fixedNav = jQuery('.tg-themetabnav');
+			const offset = fixedNav.offset().top-60;
+			jQuery(window).on('scroll', function() {
+				
+				const fixedNav = jQuery('.tg-themetabnav');
+				const placeholder = jQuery('.tg-themetabnav-placeholder');
+				
+
+				// 
+				const scrollPosition = jQuery(window).scrollTop();
+			
+				if (scrollPosition >= offset) {
+					if (!fixedNav.hasClass('fixed')) {
+						fixedNav.width(window.innerHeight-60); // 변경: offsetWidth -> offsetHeight
+						fixedNav.css('left', '0px'); // 변경: fixed position에서 left 값을 0으로 설정
+						fixedNav.addClass('fixed');
+						placeholder.css('height','120px');
+					}
+				} else {
+					fixedNav.removeClass('fixed');
+				}
+			
+				jQuery('.tab-pane').each(function() {
+					const paneTop = jQuery(this).offset().top;
+					const paneBottom = paneTop + jQuery(this).height();
+					const tabId = jQuery(this).attr('id');
+					const correspondingTab = jQuery(`.tg-themetabnav li a[href="#${tabId}"]`).parent();
+
+					if (scrollPosition >= paneTop-600 && scrollPosition < paneBottom-500) {
+						correspondingTab.addClass('active');
+					} else {
+						correspondingTab.removeClass('active');
+					}
+				});
+			});
 		});
-	});
-	
+		
+	}
 	/* -------------------------------------
 			MASONRY GALLERY
 	-------------------------------------- */
@@ -478,6 +482,9 @@ jQuery(window).on('load', function() {
 /* -------------------------------------
 			LOADER End
 -------------------------------------- */
+// 첫페이지 팝업
+if(window.location.href[window.location.href.length-1]==="/" || window.location.href.includes("index")){
+
 
 window.onload = function() {
 	// 팝업을 표시하고 body의 밝기를 조절
@@ -492,16 +499,20 @@ window.onload = function() {
 	});
   };
 
-
+}
 //   휠제한
-document.querySelector('.tourMap_box iframe').addEventListener('load', function() {
+if(window.location.href.includes("tourDetail")){
 
-	const iframeDocument = this.contentWindow.document;
-	console.log(iframeDocument);
+	document.querySelector('.tourMap_box iframe').addEventListener('load', function() {
 
-	iframeDocument.addEventListener('dragstart', function(event) {
-		event.preventDefault();
+		const iframeDocument = this.contentWindow.document;
+		console.log(iframeDocument);
+	
+		iframeDocument.addEventListener('dragstart', function(event) {
+			event.preventDefault();
+		});
 	});
-});
-
-
+	
+	
+	
+}

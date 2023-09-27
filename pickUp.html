@@ -24,7 +24,8 @@
 	<link rel="stylesheet" href="css/color.css">
 	<link rel="stylesheet" href="css/responsive.css">
 	<script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-
+	<!-- calendar -->
+	<link rel="stylesheet" href="css/calendar.css">
 	<!-- 2 -->
 	<!-- link to font awesome -->
 	<!-- <link media="all" rel="stylesheet" href="about/vendors/font-awesome/css/font-awesome.css"> -->
@@ -64,11 +65,11 @@
 		<ul>
 			<li><a href="./index.html">Home</a>
 			</li>
-			<li><a href="./pickUp.html">PickUp</a>
+			<li><a href="./pickUp.html">공항 픽업&드랍 요청</a>
 			</li>
 			<li><a href="./aboutus.html">About Us</a>
 			</li>
-			<li><a href="./tourList.html">Tours</a>
+			<li><a href="./tourList.html">멜버른 데이 투어</a>
 			</li>
 			<li><a href="./contactus.html">Contact</a>
 			</li>
@@ -106,9 +107,9 @@
 							<div id="tg-navigation" class="collapse navbar-collapse tg-navigation">
 								<ul>
 									<li><a href="./index.html">Home</a></li>
-									<li class="current-menu-item"><a href="./pickUp.html">PickUp</a></li>
+									<li class="current-menu-item"><a href="./pickUp.html">공항 픽업&드랍 요청</a></li>
 									<li><a href="./aboutus.html">About Us</a></li>
-									<li><a href="./tourList.html">Tours</a></li>
+									<li><a href="./tourList.html">멜버른 데이 투어</a></li>
 									<li><a href="./contactus.html">contact</a></li>
 								</ul>
 							</div>
@@ -128,8 +129,8 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-							<h1>Need Pickup?</h1>
-							<h2>We are the Best Choice</h2>
+							<h1>공항 픽업 서비스</h1>
+							<h2>마스터 픽업은 멜버른 전 지역의 픽업 서비스를 제공하고 있고 멜버른 최고의 공항 픽업 서비스 업체로서 10년 이상의 서비스를 제공, 5000명 이상의 누적 고객수를 자랑 합니다.</h2>
 						</div>
 					</div>
 				</div>
@@ -153,7 +154,7 @@
 				<div class="container">
 					<header class="content-heading">
 						<h2 class="main-heading">공항 픽업이 필요하신가요?</h2>
-						<strong class="main-subtitle">마스터픽업은 5년 이상의 경력, 100+이상의 누적 고객수를 자랑합니다.</strong>
+						<strong class="main-subtitle">마스터픽업은 10년 이상의 경력, 5000+이상의 누적 고객수를 자랑합니다.</strong>
 						<div class="seperator"></div>
 					</header>
 					<div class="row text-center">
@@ -177,7 +178,7 @@
 						</div>
 						<div class="col-sm-4 article">
 							<div class="img-wrap1">
-								<img width="118" src="about/img/icons/ico-level4.svg" alt="image description">
+								<img width="120" style="height: 120px;" src="about/img/icons/ico-level4.svg" alt="image description">
 							</div>
 							<div class="description">
 								<h3>안전을 약속드립니다</h3>
@@ -336,6 +337,69 @@
 												<h4>다음 견적은 유사값을 제공할 뿐, 정확한 금액은 카카오톡 상담하기를 통해 안내받으실 수 있습니다!</h4>
 											</div>
 
+											<!-- 0 -->
+											
+											<div id="box0" class="pickUp_box00 pickUp_box">
+												<div class="pickUp_nav">
+													<div class="backBtn" style="display: none;">
+														<img src="" alt="back" onclick="showPreviousBox(0)">
+													</div>
+													<div class="nextBtn" onclick="showNextBox(0)">
+														<img src="" alt="next">
+													</div>
+												</div>
+												
+												<div class="pickUp_header">
+													<h2>Date/Time</h2>
+												</div>
+												<div id="airportList" class="pickUp_body00 pickUp_body">
+													<div class="calendar">
+														<div class="calendar-header">
+															<div class="month-picker" id="month-picker">
+																<span class="month-change" id="prev-month">
+																	<div><</div>
+																</span>
+																<span id="month">April</span>
+																<span class="month-change" id="next-month">
+																	<div>></div>
+																</span>
+															</div>
+															<div class="year-picker">
+																<span class="year-change" id="prev-year">
+																	<div><</div>
+																</span>
+																<span id="year">2022</span>
+																<span class="year-change" id="next-year">
+																	<div>></div>
+																</span>
+															</div>
+														</div>
+														<div class="calendar-body">
+															<div class="calendar-week-day">
+																<div>Sun</div>
+																<div>Mon</div>
+																<div>Tue</div>
+																<div>Wed</div>
+																<div>Thu</div>
+																<div>Fri</div>
+																<div>Sat</div>
+															</div>
+															<div class="calendar-days"></div>
+														</div>
+													   
+														<div class="month-list"></div>
+													</div>
+												</div>
+												<div class="pickUp_footer">
+													<div class="progressBar">
+														<div class="progressBarFill" style="width: 20%;"></div>
+													</div>
+													<div class="progressText">1/5</div>
+												</div>
+											</div>
+
+
+
 											<!-- 1 -->
 											
 											<div id="box1" class="pickUp_box01 pickUp_box">
@@ -359,9 +423,9 @@
 												</ul>
 												<div class="pickUp_footer">
 													<div class="progressBar">
-														<div class="progressBarFill" style="width: 25%;"></div>
+														<div class="progressBarFill" style="width: 40%;"></div>
 													</div>
-													<div class="progressText">1/4</div>
+													<div class="progressText">2/5</div>
 												</div>
 											</div>
 											<!-- 2 -->
@@ -394,9 +458,9 @@
 												</ul>
 												<div class="pickUp_footer">
 													<div class="progressBar">
-														<div class="progressBarFill" style="width: 50%;"></div>
+														<div class="progressBarFill" style="width: 60%;"></div>
 													</div>
-													<div class="progressText">2/4</div>
+													<div class="progressText">3/5</div>
 												</div>
 											</div>
 											<!-- 3 -->
@@ -447,9 +511,9 @@
 												</ul>
 												<div class="pickUp_footer">
 													<div class="progressBar">
-														<div class="progressBarFill" style="width: 75%;"></div>
+														<div class="progressBarFill" style="width: 80%;"></div>
 													</div>
-													<div class="progressText">3/4</div>
+													<div class="progressText">4/5</div>
 												</div>
 											</div>
 											<!-- 4 -->
@@ -525,7 +589,7 @@
 													<div class="progressBar">
 														<div class="progressBarFill" style="width: 100%;"></div>
 													</div>
-													<div class="progressText">4/4</div>
+													<div class="progressText">5/5</div>
 												</div>
 											</div>
 											<!-- 5 -->
@@ -692,5 +756,7 @@
 	<script src="about/js/mailchimp.js"></script>
 	<!-- custom script -->
 	<script src="about/js/jquery.main.js"></script>
+	<!-- calendar -->
+	<script src="js/calendar.js"></script>
 </body>
 </html>

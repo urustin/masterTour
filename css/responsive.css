@@ -761,7 +761,7 @@
 @media (max-width:568px){
 	#pickUp_main2{
 		/* background-color: blue; */
-		height: 80vh;
+		/* height: 80vh; */
 	}
 	.pickUp_nav{
 		height: 7vh;
@@ -774,10 +774,10 @@
 		margin-bottom: 20px;
 	}
 	.pickUp_box{
-		height: 80vh;
+		/* height: 80vh; */
 	}
 	.pickUp_body{
-		height: 59vh;
+		/* height: 59vh; */
 	}
 	.pickUp_footer{
 		height: 7vh;

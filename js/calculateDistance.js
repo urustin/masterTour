@@ -40,6 +40,21 @@ function initMap() {
 
 }
 
+// body 00 - date/time
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const now = new Date();
+    
+    const year = now.getFullYear();
+    const month = (now.getMonth() + 1).toString().padStart(2, '0'); // add 1 because months are zero-indexed
+    const day = now.getDate().toString().padStart(2, '0');
+    const hour = now.getHours().toString().padStart(2, '0');
+
+    document.querySelector('#dateAndTime #date').value = `${year}-${month}-${day}`;
+    document.querySelector('#dateAndTime #hour').value = `${hour}:00`; // set minutes and seconds to 00
+});
+
 
 
 
@@ -65,7 +80,13 @@ document.getElementById('airportList').addEventListener('click', function(event)
 
 
         airportValue = selectedValue;
-        airportName = selectedAirport.trim(); // remove potential extra spaces
+        // airportName = selectedAirport.trim(); // remove potential extra spaces
+        if(selectedValue==="4"){
+            airportName = "Avalon Airport, Beach Road, Lara VIC"
+        }else{
+            airportName = "Melbourne Airport (MEL), Arrival Drive, Melbourne Airport VIC, Australia"
+        }
+        
         document.getElementById('locationA').value = airportName;
         // Further logic can be added here
         // Autocomplete 객체를 업데이트

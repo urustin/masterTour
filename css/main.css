@@ -5432,13 +5432,36 @@ body.tg-hidescroll{overflow:hidden;}
 
 /* body */
 
-
 .pickUp_body{
 	height: 500px;
 	margin-bottom:20px;
 	/* background-color: lightgray; */
 }
 
+/* 0 */
+#dateAndTime .form{
+	/* background-color: rgba(250, 50, 250, 0.2); */
+	width: 80%;
+
+	height: 80%;
+	margin: auto;
+	display: flex;
+	align-items: center;
+}
+
+#dateAndTime .submit{
+	display: block;
+	margin: auto;
+
+}
+
+#dateAndTime .date{
+	flex: 1 1 auto;
+}
+#dateAndTime .time{
+	flex: 1 1 auto;
+}
+/* 1 */
 .pickUp_body01{
 	display: flex;
 	flex-wrap: wrap;
@@ -5452,24 +5475,58 @@ body.tg-hidescroll{overflow:hidden;}
 	width: 46%;
 	margin:0% 2%;
 	list-style: none;
-	background-color: aliceblue;
-	text-align: center;
 
+	text-align: center;
+	position: relative;
+	transition: 0.3s;
 }
+
+
 .pickUp_body01 li:hover{
 	cursor: pointer;
+	opacity: 0.5;
 }
 .pickUp_body01 li div{
 	height: 200px;
 	width: 100%;
-	background-color: #0077B5;
+
 	margin-bottom: 8px;
 	border-radius: 10px;
 }
+.pickUp_body01 li .bg1{
+	background-image: url(/images/add5/air2/1_2.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.pickUp_body01 li .bg2{
+	background-image: url(/images/add5/air2/2.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.pickUp_body01 li .bg3{
+	background-image: url(/images/add5/air2/3.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.pickUp_body01 li .bg4{
+	background-image: url(/images/add5/air2/4.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
 .pickUp_body01 li div h4{
-	padding-top: 80px;
-	color: white;
-	font-size: 2rem;
+	/* padding-top: 80px; */
+	/* color: white; */
+	
+	font-size: 1.3rem;
+	position: absolute;
+	bottom: 35px;
+	left:25%;
+	width: 50%;
 }
 /* 2 */
 .pickUp_body02 #map{

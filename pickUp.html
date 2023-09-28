@@ -24,8 +24,7 @@
 	<link rel="stylesheet" href="css/color.css">
 	<link rel="stylesheet" href="css/responsive.css">
 	<script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-	<!-- calendar -->
-	<link rel="stylesheet" href="css/calendar.css">
+
 	<!-- 2 -->
 	<!-- link to font awesome -->
 	<!-- <link media="all" rel="stylesheet" href="about/vendors/font-awesome/css/font-awesome.css"> -->
@@ -352,43 +351,22 @@
 												<div class="pickUp_header">
 													<h2>Date/Time</h2>
 												</div>
-												<div id="airportList" class="pickUp_body00 pickUp_body">
-													<div class="calendar">
-														<div class="calendar-header">
-															<div class="month-picker" id="month-picker">
-																<span class="month-change" id="prev-month">
-																	<div><</div>
-																</span>
-																<span id="month">April</span>
-																<span class="month-change" id="next-month">
-																	<div>></div>
-																</span>
-															</div>
-															<div class="year-picker">
-																<span class="year-change" id="prev-year">
-																	<div><</div>
-																</span>
-																<span id="year">2022</span>
-																<span class="year-change" id="next-year">
-																	<div>></div>
-																</span>
-															</div>
+
+												<div id="dateAndTime" class="pickUp_body00 pickUp_body">
+													<h4>예상 공항 도착 예정 시간을 알려주세요</h4>
+													<div class="form">
+														<div class="date">
+															<label for="date">Select Date:</label>
+															<input type="date" id="date" name="date" required>
 														</div>
-														<div class="calendar-body">
-															<div class="calendar-week-day">
-																<div>Sun</div>
-																<div>Mon</div>
-																<div>Tue</div>
-																<div>Wed</div>
-																<div>Thu</div>
-																<div>Fri</div>
-																<div>Sat</div>
-															</div>
-															<div class="calendar-days"></div>
+														<div class="time">
+															<label for="time">Select Time:</label>
+															<input type="time" id="hour" name="hour" min="0" max="24" required>
 														</div>
-													   
-														<div class="month-list"></div>
 													</div>
+													<button class="submit tg-btn" onclick="showNextBox(0)">
+														<span>submit</span>
+													</button>
 												</div>
 												<div class="pickUp_footer">
 													<div class="progressBar">
@@ -404,7 +382,7 @@
 											
 											<div id="box1" class="pickUp_box01 pickUp_box">
 												<div class="pickUp_nav">
-													<div class="backBtn" style="display: none;">
+													<div class="backBtn">
 														<img src="" alt="back" onclick="showPreviousBox(1)">
 													</div>
 													<div class="nextBtn" onclick="showNextBox(1)">
@@ -416,10 +394,10 @@
 													<h2>Select The Airport</h2>
 												</div>
 												<ul id="airportList" class="pickUp_body01 pickUp_body">
-													<li data-value="1"><div><h4>(국제선) 툴라마린(멜버른) 공항 T2</h4></div>항공사명</li>
-													<li data-value="2"><div><h4>T1,3 툴라마린(멜버른) 공항 (국내선)</h4></div>콴타스/버진오스트레일리아</li>
-													<li data-value="3"><div><h4>T4 툴라마린 공항(멜버른) 공항 (국내선)</h4></div>젯스타/렉시</li>
-													<li data-value="4"><div><h4>아발론 공항</h4></div>항공사명</li>
+													<li data-value="1"><div class="bg1"><h4></h4></div>(국제선) 툴라마린(멜버른) 공항 T2</li>
+													<li data-value="2"><div class="bg2"><h4>콴타스/버진오스트레일리아</h4></div>T1,3 툴라마린(멜버른) 공항 (국내선)</li>
+													<li data-value="3"><div class="bg3"><h4>젯스타/렉시</h4></div>T4 툴라마린 공항(멜버른) 공항 (국내선)</li>
+													<li data-value="4"><div class="bg4"><h4></h4></div>아발론 공항</li>
 												</ul>
 												<div class="pickUp_footer">
 													<div class="progressBar">
@@ -444,15 +422,13 @@
 												<ul class="pickUp_body02 pickUp_body">
 													<div>
 														<input type="text" id="locationA" placeholder="Enter first location" disabled >
-														<input type="text" id="locationB" placeholder="Enter second location">
-														
+														<input type="text" id="locationB" placeholder="도착 예정지를 입력해주세요">
 														<button id="calculateBtn" onclick="calculateDistance()">Calculate</button>
 													</div>
 													<div id="map"></div>
 													<div id="resultBox">
 														<div id="distanceResult"></div>
 														<button id="confirmBtn" onclick="showNextBox(2)">넘어가기</button>
-													
 													</div>
 													
 												</ul>
@@ -757,6 +733,5 @@
 	<!-- custom script -->
 	<script src="about/js/jquery.main.js"></script>
 	<!-- calendar -->
-	<script src="js/calendar.js"></script>
 </body>
 </html>

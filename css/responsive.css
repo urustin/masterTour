@@ -820,4 +820,8 @@
 		width: 90%;
 		left: 5%;
 	}
+	/* 0body */
+	#dateAndTime .form{
+		display: block;
+	}
 }

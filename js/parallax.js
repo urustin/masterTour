@@ -38,6 +38,8 @@
   // Parallax Constructor
 
   function Parallax(element, options) {
+    const params = new URLSearchParams(window.location.search);
+    const queryString = params.toString().slice(0,-1); // 쿼리 스트링 전체를 가져옵니다.
     var self = this;
 
     if (typeof options == 'object') {
@@ -47,7 +49,7 @@
     }
 
     this.$element = $(element);
-
+    
     if (!this.imageSrc && this.$element.is('img')) {
       this.imageSrc = this.$element.attr('src');
     }
@@ -94,7 +96,8 @@
     if (navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
       if (this.iosFix && !this.$element.is('img')) {
         this.$element.css({
-          backgroundImage: 'url(' + this.imageSrc + ')',
+          
+          backgroundImage: window.location.href.includes("tourDetail") ? 'url(' + `images/add7/tourPhotos/${queryString}/main/main2_edit.jpg` + ')' : 'url(' + this.imageSrc + ')',
           backgroundSize: 'cover',
           backgroundPosition: this.position
         });
@@ -105,7 +108,7 @@
     if (navigator.userAgent.match(/(Android)/)) {
       if (this.androidFix && !this.$element.is('img')) {
         this.$element.css({
-          backgroundImage: 'url(' + this.imageSrc + ')',
+          backgroundImage: window.location.href.includes("tourDetail") ? 'url(' + `images/add7/tourPhotos/${queryString}/main/main2_edit.jpg` + ')' : 'url(' + this.imageSrc + ')',
           backgroundSize: 'cover',
           backgroundPosition: this.position
         });
@@ -137,8 +140,9 @@
       Parallax.isFresh = false;
       Parallax.requestRender();
     });
-
-    this.$slider[0].src = this.imageSrc;
+    
+    // imageSrc
+    this.$slider[0].src = window.location.href.includes("tourDetail") ? `images/add7/tourPhotos/${queryString}/main/main2_edit.jpg` :this.imageSrc;
 
     if (this.naturalHeight && this.naturalWidth || this.$slider[0].complete) {
       this.$slider.trigger('load');

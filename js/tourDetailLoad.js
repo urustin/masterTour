@@ -1,5 +1,10 @@
-if(window.location.href.includes("tourList")){
+// tourDetailLoad.js
 
+const params = new URLSearchParams(window.location.search);
+const queryString = params.toString().slice(0,-1); // 쿼리 스트링 전체를 가져옵니다.
+
+if(window.location.href.includes("tourList")){
+    
 // 쿼리
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -7,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const tours = document.querySelectorAll('.tg-populartour');
     tours.forEach(tour => {
         // console.log(tour.querySelector('a'));
+
         tour.querySelector('a').addEventListener('click', function(e) {
             // data-id 값을 가져와서 URL을 구성합니다.
             e.preventDefault();
@@ -14,6 +20,9 @@ document.addEventListener('DOMContentLoaded', function() {
             window.location.href = `./tourDetail.html?${id}`;
             
         });
+        tour.querySelector(".tg-pricearea del").innerHTML = tourTitle[tour.dataset.id].price.length>=4 ?  "$"+String(tourTitle[tour.dataset.id].price *1.5).slice(0,1)+","+String(tourTitle[tour.dataset.id].price *1.5).slice(1)+"~"  :  "$"+tourTitle[tour.dataset.id].price *1.5 +"~";
+        tour.querySelector(".tg-pricearea h4").innerHTML = tourTitle[tour.dataset.id].price.length>=4 ?  "$"+String(tourTitle[tour.dataset.id].price *1.5).slice(0,1)+","+String(tourTitle[tour.dataset.id].price *1.5).slice(1)+"~"  :  "$"+tourTitle[tour.dataset.id].price *1.5 +"~";
+        // tour.querySelector(`[data-id=${query}]`)
     });
 });
 
@@ -23,10 +32,10 @@ if(window.location.href.includes("tourDetail")){
 
 
 
+
 // 여행소개
 
-const params = new URLSearchParams(window.location.search);
-const queryString = params.toString().slice(0,-1); // 쿼리 스트링 전체를 가져옵니다.
+
 
 
 // title
@@ -36,6 +45,7 @@ const queryString = params.toString().slice(0,-1); // 쿼리 스트링 전체를
 document.addEventListener('DOMContentLoaded', function () {
     // tourTitle에서 필요한 tour 정보 가져오기
     const tourKey = queryString; // 예를 들어, 여기서는 'great' 키에 해당하는 tour 정보를 가져오는 것으로 가정합니다.
+    console.log(tourTitle);
     const tour = tourTitle[tourKey];
 
     if (tour) {
@@ -53,8 +63,8 @@ document.addEventListener('DOMContentLoaded', function () {
         // 가격 채우기
         const priceElement = document.querySelector('.tg-pricearea h4');
         const priceElement2 = document.querySelector('.tg-pricearea del');
-        if (priceElement) priceElement.innerHTML = `$${tour.price}~<sub>/ 정확한 가격은 문의바랍니다</sub>`;
-        if (priceElement2) priceElement2.innerHTML = `$${tour.price*1.5}`;
+        if (priceElement) priceElement.innerHTML = `${tour.price.length>=4?String(tour.price).slice(0,1)+","+String(tour.price).slice(1):tour.price}~<sub>/ 정확한 가격은 문의바랍니다</sub>`;
+        if (priceElement2) priceElement2.innerHTML = `$${tour.price.length>=4?String(tour.price*1.5).slice(0,1)+","+String(tour.price*1.5).slice(1):tour.price*1.5}`;
         // Create <p> element and set tour description
         const descriptionElement = document.createElement('p');
         descriptionElement.id = "tg-tourdescription2";
@@ -66,17 +76,77 @@ document.addEventListener('DOMContentLoaded', function () {
         if (timePeopleElements[0]) timePeopleElements[0].textContent = `예상 소요시간 : ${tour.time}시간`; // 걸리는 시간
         if (timePeopleElements[1]) timePeopleElements[1].textContent = `${tour.people}인부터 가능`; // 최소 인원
 
+
+
         // 사진 채우기
         const photoBox = document.querySelector('.tourDetail_photoBox');
         if (photoBox) {
             photoBox.innerHTML = ''; // 기존의 이미지를 제거
-            tour.photo.forEach(src => {
+            for(let i=1;i<tour.photo.length+1;i++){
                 const img = document.createElement('img');
-                img.src = src;
+                img.src = `images/add7/tourPhotos/${queryString}/main/main${i}_edit.jpg`;
                 img.alt = '';
                 photoBox.appendChild(img);
-            });
+            }
         }
+        
+
+        // if(imageBanner){
+
+        //     imageBanner.setAttribute('data-image-src', `images/add7/tourPhotos/${queryString}/main/main1_edit.jpg`);
+        // }
+        // window.imageBanner = `images/add7/tourPhotos/${queryString}/main/main1_edit.jpg`;
+        // console.log(imageBanner);
+        //  > div:nth-child(1) > div
+        // 갤러리 채우기
+        const slider = document.querySelector('#tg-populartoursslider');
+        for (let i = 0; i < parseInt(tour.gallery); i++) {
+            const imageUrl = `images/add7/tourPhotos/${queryString}/gallery/${i}.jpg`;
+
+            const div = document.createElement('div');
+            div.className = 'item tg-populartour';
+
+            const figure = document.createElement('figure');
+            
+            const img = document.createElement('img');
+            img.src = imageUrl;
+            img.alt = 'image destinations';
+            figure.appendChild(img);
+
+            const a = document.createElement('a');
+            a.href = 'javascript:void(0);';
+            a.appendChild(figure);
+
+            div.appendChild(a);
+            slider.appendChild(div);
+        }
+
+        // Initialize the Owl Carousel after adding the images
+        var _tg_populartoursslider = jQuery('#tg-populartoursslider');
+        _tg_populartoursslider.owlCarousel({
+            loop: true,
+            dots: false,
+            nav: true,
+            margin:30,
+            autoplay: false,
+            responsiveClass:true,
+            responsive:{
+                320:{ items:1, },
+                639:{ items:2, },
+                768:{ items:2, },
+                992:{ items:3, },
+                1200:{ items:3, }
+            },
+            navText: [
+                '<i class="icon-chevron-left"></i>',
+                '<i class="icon-chevron-right"></i>',
+            ],
+            navClass: [
+                'tg-btnroundprev',
+                'tg-btnroundnext'
+            ],
+        });
+
     }
 });
 

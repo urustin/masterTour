@@ -43,30 +43,30 @@ jQuery(document).on('ready', function() {
 	/* -------------------------------------
 			POPULAR tOUR SLIDER
 	-------------------------------------- */
-	var _tg_populartoursslider = jQuery('#tg-populartoursslider');
-	_tg_populartoursslider.owlCarousel({
-		loop: true,
-		dots: false,
-		nav: true,
-		margin:30,
-		autoplay: false,
-		responsiveClass:true,
-		responsive:{
-			320:{ items:1, },
-			639:{ items:2, },
-			768:{ items:2, },
-			992:{ items:3, },
-			1200:{ items:3, }
-		},
-		navText: [
-			'<i class="icon-chevron-left"></i>',
-			'<i class="icon-chevron-right"></i>',
-		],
-		navClass: [
-			'tg-btnroundprev',
-			'tg-btnroundnext'
-		],
-	});
+	// var _tg_populartoursslider = jQuery('#tg-populartoursslider');
+	// _tg_populartoursslider.owlCarousel({
+	// 	loop: true,
+	// 	dots: false,
+	// 	nav: true,
+	// 	margin:30,
+	// 	autoplay: false,
+	// 	responsiveClass:true,
+	// 	responsive:{
+	// 		320:{ items:1, },
+	// 		639:{ items:2, },
+	// 		768:{ items:2, },
+	// 		992:{ items:3, },
+	// 		1200:{ items:3, }
+	// 	},
+	// 	navText: [
+	// 		'<i class="icon-chevron-left"></i>',
+	// 		'<i class="icon-chevron-right"></i>',
+	// 	],
+	// 	navClass: [
+	// 		'tg-btnroundprev',
+	// 		'tg-btnroundnext'
+	// 	],
+	// });
 	/* -------------------------------------
 			POPULAR tOUR SLIDER
 	-------------------------------------- */

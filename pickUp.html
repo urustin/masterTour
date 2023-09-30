@@ -454,7 +454,7 @@
 												</div>
 												<ul class="pickUp_body03 pickUp_body">
 													<li data-value="1">
-														<img src="/images/car/honda@2x1.png" alt="">
+														<img src="/images/add6/car/tesla.png" alt="">
 														<div class="text_car">
 															<h3>Premium</h3>
 															<h4>테슬라 model 3,Y (~인승)</h4>
@@ -462,14 +462,14 @@
 													
 													</li>
 													<li data-value="2">
-														<img src="/images/car/kia@2x1.png" alt="">
+														<img src="/images/add6/car/kia@2x1.png" alt="">
 														<div class="text_car">
 															<h3>Sedan</h3>
 															<h4>도요타 캠리 1~2명 (+체크인 수하물 2개 이하)</h4>
 														</div>
 													</li>
 													<li data-value="3">
-														<img src="/images/car/kia@2x1.png" alt="">
+														<img src="/images/add6/car/honda@2x1.png" alt="">
 														<div class="text_car">
 															<h3>Suv</h3>
 															<h4>적정 인원 수 3~4명 (+체크인 수하물 4개 이하)</h4>
@@ -506,26 +506,36 @@
 													<h2>Else?</h2>
 												</div>
 												<ul class="pickUp_body04 pickUp_body">
+
+													<li data-type="">
+														<h4>인원수를 알려주세요</h4>
+														<div class="box_value" style="margin-left: 30px;">
+															<button onclick="decrease(0)">-</button>
+															<span id="carrierNumber0">0</span>
+															<button onclick="increase(0)">+</button>
+														</div>
+													</li>
+
 													<li data-type="">
 														<h4>캐리어는 총 몇개이신가요?</h4>
 														<div class="box_value carrierBox">
 															<div class="carrier_Big">
-																<h4>대형</h4>
-																<button onclick="decrease()">-</button>
-																<span id="carrierNumber">0</span>
-																<button onclick="increase()">+</button>
+																<img src="images/add5/luggage/suitcase~20.png" alt="">
+																<button onclick="decrease(1)">-</button>
+																<span id="carrierNumber1">0</span>
+																<button onclick="increase(1)">+</button>
 															</div>
 															<div class="carrier_Mid">
-																<h4>중형</h4>
-																<button onclick="decrease()">-</button>
-																<span id="carrierNumber">0</span>
-																<button onclick="increase()">+</button>
+																<img src="images/add5/luggage/suitcase24.png" alt="">
+																<button onclick="decrease(2)">-</button>
+																<span id="carrierNumber2">0</span>
+																<button onclick="increase(2)">+</button>
 															</div>
 															<div class="carrier_Small">
-																<h4>기내용</h4>
-																<button onclick="decrease()">-</button>
-																<span id="carrierNumber">0</span>
-																<button onclick="increase()">+</button>
+																<img src="images/add5/luggage/suitcase28~.png" alt="">
+																<button onclick="decrease(3)">-</button>
+																<span id="carrierNumber3">0</span>
+																<button onclick="increase(3)">+</button>
 															</div>
 														</div>
 													  </li>
@@ -549,15 +559,7 @@
 															<input type="radio" id="booster0" name="booster" value="0" checked>
 														</div>
 													</li>
-													<li data-type="">
-														<h4>결제 방식?</h4>
-														<div class="box_value">
-															<label for="payment1">현금</label>
-															<input type="radio" id="payment1" name="payment" value="1">
-															<label for="payment0">카드</label>
-															<input type="radio" id="payment0" name="payment" value="0" checked>
-														</div>
-													</li>
+													
 													<button class="optionConfirm">제출하기</button>
 												</ul>
 												

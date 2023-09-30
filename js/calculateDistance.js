@@ -110,29 +110,98 @@ document.querySelector('.pickUp_body03').addEventListener('click', function(even
 //body4 - additional Option
 document.querySelector('.optionConfirm').addEventListener('click', function() {
     // Ensure that only list items are considered
-    const carrierCount = document.getElementById('carrierNumber').innerText;
+    const peopleCount = document.getElementById('carrierNumber0').innerText;
+    const carrierCount = [document.getElementById('carrierNumber1').innerText, document.getElementById('carrierNumber2').innerText, document.getElementById('carrierNumber3').innerText];
     const carseatValue = document.querySelector('input[name="carseat"]:checked').value;
     const boosterValue = document.querySelector('input[name="booster"]:checked').value;
     
-    result = [...result, carrierCount, carseatValue, boosterValue];
+    result = [...result, peopleCount, carrierCount, carseatValue, boosterValue];
 
 
     showNextBox(4);
+    let result2 = 0;
+    console.log(result[0]);
+    //distance 0
+    //cartype 1
+    //people 2
+    //carrier 3
+    // Calculater
+    
+    if(result[1]==="1"){
+        result2 = parseFloat(result[0])*4.3 + result[4]*10+ result[5]*10;
+    }else
+    if(result[1]==="2"){
+        result2 = parseFloat(result[0])*2.6 + result[4]*10+ result[5]*10;
+    }else
+    if(result[1]==="3"){
+        result2 = parseFloat(result[0])*3.4 + result[4]*10+ result[5]*10;
+    }else{
+        result2 = parseFloat(result[0])*4.3 + result[4]*10+ result[5]*10;
+    }
+    if(result.length===6){
+        document.querySelector("#expectation").innerText = "예상금액 : "+ result2 +"(AUD)";
+    }else{
+        alert("누락된 입력값이 있습니다! 새로고침 이후 다시한번 계산을 시작해주세요!")
+    }
+    
 
-    document.querySelector("#expectation").innerText = "예상금액 : "+ result;
+
 });
 
-let carrierCount = 0; // 초기값
+let carrierCount = [0,0,0,0]; // 초기값
 
-function increase() {
-  carrierCount++;
-  document.getElementById('carrierNumber').innerText = carrierCount;
+
+
+
+function increase(e) {
+
+    if(result.length!==0){
+
+        if (carType==="1"){
+
+            if(carrierCount[0]<3 && carrierCount[1]<7 && carrierCount[2]<5 && carrierCount[3]<3){
+                carrierCount[e]++;
+                document.getElementById(`carrierNumber${e}`).innerText = carrierCount[e];
+            }else{
+                alert("차량에 비해 너무 많은 인원/짐입니다! 차량 변경을 추천드립니다!")
+            }
+            
+        }else
+        if (carType==="2"){
+            if(carrierCount[0]<3 && carrierCount[1]<7 && carrierCount[2]<5 && carrierCount[3]<3){
+                carrierCount[e]++;
+                document.getElementById(`carrierNumber${e}`).innerText = carrierCount[e];
+            }else{
+                alert("차량에 비해 너무 많은 인원/짐입니다! 차량 변경을 추천드립니다!")
+            }
+            
+        }else
+        if (carType==="3"){
+            if(carrierCount[0]<5 && carrierCount[1]<10 && carrierCount[2]<7 && carrierCount[3]<5){
+                carrierCount[e]++;
+                document.getElementById(`carrierNumber${e}`).innerText = carrierCount[e];
+            }else{
+                alert("차량에 비해 너무 많은 인원/짐입니다! 차량 변경을 추천드립니다!")
+            }
+            
+        }else{
+            if(carrierCount[0]<7 && carrierCount[1]<11 && carrierCount[2]<8 && carrierCount[3]<6){
+                carrierCount[e]++;
+                document.getElementById(`carrierNumber${e}`).innerText = carrierCount[e];
+            }else{
+                alert("차량에 비해 너무 많은 인원/짐입니다! 차량 변경을 추천드립니다!")
+            }
+        }
+    }else{
+        alert("차량, 거리를 먼저 선택해주세요!")
+    }
+  
 }
 
-function decrease() {
-  if(carrierCount > 0) {
-    carrierCount--;
-    document.getElementById('carrierNumber').innerText = carrierCount;
+function decrease(e) {
+  if(carrierCount[e] > 0) {
+    carrierCount[e]--;
+    document.getElementById(`carrierNumber${e}`).innerText = carrierCount[e];
   }
 }
 

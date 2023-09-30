@@ -5610,19 +5610,25 @@ input:disabled{
 	margin: 10px 0px;
 	background-color: rgba(73, 196, 230, 0.151);
 	border-radius: 10px;
-	padding-top: 40px;
+	/* padding-top: 40px; */
 	padding-left: 20px;
 	box-shadow: 0px 0px 20px 0px rgba(250, 250, 250, 0.5);
 	transition: 0.3s;
+	align-items: center;
+
 }
 .pickUp_body04 li:hover{
 	transform: scale(1.05);
 }
 .pickUp_body04 h4{
 	width: 60%;
+	margin-bottom: 0px;
+	/* padding-top: 35px; */
 }
 .pickUp_body04 .box_value{
 	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .pickUp_body04 .box_value label{
 	margin : 0 10px;
@@ -5632,7 +5638,7 @@ input:disabled{
 	cursor: pointer;
 }
 .pickUp_body04 .carrierBox{
-	margin-top: -18px;
+	/* margin-top: -30px; */
 }
 .pickUp_body04 .carrierBox div{
 	margin-right: 20px;
@@ -5640,6 +5646,11 @@ input:disabled{
 .pickUp_body04 .carrierBox h4{
 	text-align: center;
 	margin: 0 auto;
+}
+.pickUp_body04 .carrierBox img{
+	display: block;
+	width: 50px;
+	margin: auto;
 }
 
 

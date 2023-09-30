@@ -490,7 +490,18 @@ window.onload = function() {
 	// 팝업을 표시하고 body의 밝기를 조절
 
 	document.getElementById("pop_container").style.display = "block";
+	if(window.innerWidth<600){
+		document.getElementById("pop_container").style.backgroundImage = "url(/images/add4/pop_m.png)";
+		document.getElementById("pop_container").style.width = window.innerHeight*0.418 +"px";
+
+		document.getElementById("pop_container").style.left = "13%";
+	}else{
+		document.getElementById("pop_container").style.width = window.innerHeight*0.302 +"px";
+	}
+	
+
 	document.getElementById("tg-wrapper").classList.add("dimmed");
+	
   
 	// exit 버튼을 누르면 팝업을 숨기고 body의 밝기를 원래대로
 	document.querySelector(".pop_exit").addEventListener("click", function() {

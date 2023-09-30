@@ -5803,20 +5803,23 @@ input:disabled{
 	display: none;
 	position:fixed;
 
-	width: 30%;
+	/* width: 20%; */
 	height: 80vh;
 
 	top: 10%;
-	left:35%;
+	left:45%;
 	box-shadow: 0px 0px 60px black;
 	z-index: 50;
-	background-image: url(/images/add4/popup.jpeg);
-	background-size: cover;
+	background-image: url(/images/add4/pop.png);
+	
+	background-size:contain;
+	background-repeat: no-repeat;
 	background-position: center;
 	/* border: 4px dashed white; */
 	border-radius: 5px;
 	text-align: center;
 	transition: 0.6s;
+
 }
 
 #pop_container h1{

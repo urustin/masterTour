@@ -5,7 +5,7 @@ const tourTitle ={
         star:`4.5`,
         review:`3`,
         price:`650`,
-        description:`설명 누락`,
+        description:`시드니에 세자매봉이 있다면 멜버른에는 그레이트 오션로드의 12사도 투어가 있고 멜버른 방문자의 우선 순위 넘버원 투어!\n대자연의 웅장함과 호주의 매력을 듬뿍 느낄수 있는 멜버른 여행지에서 빠질수 없는 12사도 투어\n12시간 가까이 진행이 되는 투어 이지만 12사도의 움장함으로 모든 것을 커버 할수 있는 투어라 자부를 합니다.`,
         time:``,
         people:`2`,
         photo: [
@@ -422,17 +422,17 @@ const course = {
         title : `그레이트 오션 로드 코스 소개`,
         1:{
             title:`멜버른 시티 숙소픽업`,
-            img:`images/add7/tourPhotos/great/course/멜번 시티 숙소.webp`,
+            img:`images/add7/tourPhotos/great/course/1.webp`,
             caption:`투어 기사님이 숙소에서 픽업후 여행을 시작합니다.`,
         },
         2:{
             title:`메모리얼 아치 (Memorial Arch)`,
-            img:`images/add7/tourPhotos/great/course/메모리얼아치_edit.jpg`,
+            img:`images/add7/tourPhotos/great/course/2.jpg`,
             caption:`그레이트 오션 로드는 군인들이 만든 그레이트 오션 로드를 기념하기 위한 말 그대로의 메모리얼 아치, 그야말로 그 사연을 기억하고 기념하기위해 만들어 놓은 곳이죠, 지금은 사진 찍는 명소로 더욱 유명해 졌고 그레이트 오션 로드의 시작을 알리는 지점 입니다.`,
         },
         3:{
             title:`케넷 리버 (Kennett River)`,
-            img:`images/add7/tourPhotos/great/course/케넷 리버_edit.jpg`,
+            img:`images/add7/tourPhotos/great/course/3.jpg`,
             caption:`야생 코알라를 만나 볼 수 있는 곳으로
             호주 여행오셔서 캥거루,코알라를 한번도 못보고 가시는 분들이 볼수 있는 장소로 유명합니다.
             이곳 그레이트 오션 로드 길가에 야생 코알라들이 모여사는 군락지가 있지만 야생 동물이라 100% 항상 볼수는 없지만
@@ -440,14 +440,14 @@ const course = {
         },
         4:{
             title:`아폴로 베이 (Apollo Bay)`,
-            img:`images/add7/tourPhotos/great/course/아폴로베이_edit.jpg`,
+            img:`images/add7/tourPhotos/great/course/4.jpg`,
             caption:`그레이트 오션 로드의 중간 지점이고
             여기 아기자기한 해변가 마을에 들려서 점심식사를 할수 있는 곳입니다.
             간단하게 피자나 해산물을 맛 볼수 있는 곳입니다.`,
         },
         5:{
             title:`12사도 전망대 (The Twelve Apostles Lookout Point)`,
-            img:`images/add7/tourPhotos/great/course/12사도전망대_edit.jpg`,
+            img:`images/add7/tourPhotos/great/course/5.jpg`,
             caption:`드디어 도착한 12사도 전망대, 정말 할말을 잃게 만드는 그런 광경이 여러분들 눈앞에 펼쳐집니다
             현재는 더 이상 12사도라고 할수 있는 12개의 기둥을 볼수는 없지만
             이곳 이름을 정할당시 어떻게 정할가를 고민하다가 이건 사람의 그리고 자연의 영역이 아닌 그것을 뛰어넘는 신의 영역에서나 가능한 일이라는 것에 마음이 모아져 예수님을 따랐던 12제자에서 아이디어를 얻었다고 하는 그레이트 오션 로드 투어의
@@ -456,7 +456,7 @@ const course = {
         },
         6:{
             title:`12사도 헬기투어 (옵션사항)`,
-            img:`images/add7/tourPhotos/great/course/12사도 헬기투어_edit.jpg`,
+            img:`images/add7/tourPhotos/great/course/6.jpg`,
             caption:`7시간을 달려서 도착한 12사도 최고의 전망대
             이 멋진 광경을 전망대에서만 보기엔 아쉬움이 너무 많이 남습니다
             하늘에서 한눈에 내려다 볼 수 있는 정말 멋진 기회…
@@ -466,21 +466,21 @@ const course = {
         },
         7:{
             title:`로크 아드 고지 (Loch Ard Gorge)`,
-            img:`images/add7/tourPhotos/great/course/로크 아드 고지_edit.jpg`,
+            img:`images/add7/tourPhotos/great/course/7.jpg`,
             caption:`탐과 에바의 사랑 이야기가 있는 곳, 그래서 더욱 애틋하게 아름다운곳 바로 로크 아드 고지입니다
             아담하고 예뻐서 12사도 전망대보다 이곳을 더 좋아하시는 분들도 있다는 곳으로 유명한 곳입니다
             이 앞바다에서 침몰된 로크 아드호는 영국 초기 이민자들의 아픈 사연이 있는 곳 입니다.`,
         },
         8:{
             title:`콜락 마을 또는 윈첼시 (Colac or Winchelsea)`,
-            img:`images/add7/tourPhotos/great/course/콜락_edit.jpg`,
+            img:`images/add7/tourPhotos/great/course/8.jpg`,
             caption:`투어를 마치고 멜번 시티로 되돌아 가는길, 조금은 지치고 피곤한 몸과 맘을 쉴 수 있는곳, 콜락(윈첼시)입니다.
             해안이 아닌 내륙으로 돌아오는 곳에 잠깐 화장실을 들를수 있는 곳입니다.
             전형적인 호주의 시골마을입니다.`,
         },
         9:{
             title:`멜번 시티 숙소 도착 (Melbourne City)`,
-            img:`images/add7/tourPhotos/great/course/멜번 시티 숙소.webp`,
+            img:`images/add7/tourPhotos/great/course/0.webp`,
             caption:`약 12시간의 그레이트 오션 로드의 대장정을 마치고 안전하게 다시 숙소로 도착으로 이번 여행을 마무리 합니다.`,
         },
     },

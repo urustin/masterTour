@@ -333,7 +333,7 @@
 
 											<div class="pickUp_caution">
 												<h2>견적내기</h2>
-												<h4>다음 견적은 유사값을 제공할 뿐, 정확한 금액은 카카오톡 상담하기를 통해 안내받으실 수 있습니다!</h4>
+												<!-- <h4>다음 견적은 유사값을 제공할 뿐, 정확한 금액은 카카오톡 상담하기를 통해 안내받으실 수 있습니다!</h4> -->
 											</div>
 
 											<!-- 0 -->
@@ -343,8 +343,8 @@
 													<div class="backBtn" style="display: none;">
 														<img src="" alt="back" onclick="showPreviousBox(0)">
 													</div>
-													<div class="nextBtn" onclick="showNextBox(0)">
-														<img src="" alt="next">
+													<div class="nextBtn" style="display: none;">
+														<img src="" alt="next" onclick="showNextBox(0)">
 													</div>
 												</div>
 												
@@ -385,8 +385,8 @@
 													<div class="backBtn">
 														<img src="" alt="back" onclick="showPreviousBox(1)">
 													</div>
-													<div class="nextBtn" onclick="showNextBox(1)">
-														<img src="" alt="next">
+													<div class="nextBtn" style="display: none;">
+														<img src="" alt="next" onclick="showNextBox(1)">
 													</div>
 												</div>
 												
@@ -412,7 +412,7 @@
 													<div class="backBtn">
 														<img src="" alt="back" onclick="showPreviousBox(2)">
 													</div>
-													<div class="nextBtn">
+													<div class="nextBtn" style="display: none;">
 														<img src="" alt="next" onclick="showNextBox(2)">
 													</div>
 												</div>
@@ -445,7 +445,7 @@
 													<div class="backBtn">
 														<img src="" alt="back" onclick="showPreviousBox(3)">
 													</div>
-													<div class="nextBtn">
+													<div class="nextBtn" style="display: none;">
 														<img src="" alt="next" onclick="showNextBox(3)">
 													</div>
 												</div>
@@ -498,7 +498,7 @@
 													<div class="backBtn">
 														<img src="" alt="back" onclick="showPreviousBox(4)">
 													</div>
-													<div class="nextBtn">
+													<div class="nextBtn" style="display: none;">
 														<img src="" alt="next" onclick="showNextBox(4)">
 													</div>
 												</div>
@@ -576,7 +576,7 @@
 													<div class="backBtn">
 														<img src="" alt="back" onclick="showPreviousBox(5)">
 													</div>
-													<div class="nextBtn">
+													<div class="nextBtn" style="display: none;">
 														<img src="" alt="next" onclick="showNextBox(5)">
 													</div>
 												</div>
@@ -586,9 +586,11 @@
 													
 												</div>
 												<div class="pickUp_body05 pickUp_body">
-													<h4 id="expectation">예상금액 : </h4>
-													<button class="pickUp_contactBtn">예약하러 가기</button>
 
+													<h4 id="expectation">예상금액 : </h4>
+													
+													<button class="pickUp_contactBtn"><a href="http://pf.kakao.com/_lLvqxj">예약하러 가기</a></button>
+													<h5>다음 견적은 유사값을 제공할 뿐, 정확한 금액은 카카오톡 상담하기를 통해 안내받으실 수 있습니다!</h4>
 												</div>
 												<div class="pickUp_footer">
 													<div class="progressBar">

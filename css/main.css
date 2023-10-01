@@ -5688,6 +5688,10 @@ input:disabled{
 
 .pickUp_body05 h4{
 	padding-top: 200px;
+	text-align: center;
+}
+.pickUp_body05 h5{
+	text-align: center;
 }
 
 .pickUp_body05 .pickUp_contactBtn{

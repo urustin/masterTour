@@ -13,15 +13,17 @@ document.addEventListener('DOMContentLoaded', function() {
     tours.forEach(tour => {
         // console.log(tour.querySelector('a'));
 
-        tour.querySelector('a').addEventListener('click', function(e) {
-            // data-id 값을 가져와서 URL을 구성합니다.
-            e.preventDefault();
-            const id = tour.dataset.id;
-            window.location.href = `./tourDetail.html?${id}`;
+        tour.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', function(e) {
+                // data-id 값을 가져와서 URL을 구성합니다.
+                e.preventDefault();
+                const id = tour.dataset.id;
+                window.location.href = `./tourDetail.html?${id}`;
+            })
             
         });
         tour.querySelector(".tg-pricearea del").innerHTML = tourTitle[tour.dataset.id].price.length>=4 ?  "$"+String(tourTitle[tour.dataset.id].price *1.5).slice(0,1)+","+String(tourTitle[tour.dataset.id].price *1.5).slice(1)+"~"  :  "$"+tourTitle[tour.dataset.id].price *1.5 +"~";
-        tour.querySelector(".tg-pricearea h4").innerHTML = tourTitle[tour.dataset.id].price.length>=4 ?  "$"+String(tourTitle[tour.dataset.id].price *1.5).slice(0,1)+","+String(tourTitle[tour.dataset.id].price *1.5).slice(1)+"~"  :  "$"+tourTitle[tour.dataset.id].price *1.5 +"~";
+        tour.querySelector(".tg-pricearea h4").innerHTML = tourTitle[tour.dataset.id].price.length>=4 ?  "$"+String(tourTitle[tour.dataset.id].price *1).slice(0,1)+","+String(tourTitle[tour.dataset.id].price *1).slice(1)+"~"  :  "$"+tourTitle[tour.dataset.id].price *1 +"~";
         // tour.querySelector(`[data-id=${query}]`)
     });
 });

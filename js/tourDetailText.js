@@ -14,6 +14,7 @@ const tourTitle ={
             '/images/add3/IMG_0085.jpeg',
         ],
         gallery:"16",
+        mapUrl:"https://www.google.com/maps/d/embed?mid=1hTakgED5lTF9Q08VktSWZYs95U921OU&ehbc=2E312F&noprof=1",
     },
     puffin :{
         title:`퍼핑빌리&필립아일랜드 펭귄퍼레이드 투어`,
@@ -29,6 +30,7 @@ const tourTitle ={
             '/images/add3/IMG_0085.jpeg',
         ],
         gallery:"20",
+        mapUrl:"https://www.google.com/maps/d/embed?mid=1e2_ZORzj7ASk67pt7h6fjonQtKeCQgc&ehbc=2E312F&noprof=1",
     },
     mornington :{
         title:`모닝턴 핫스핑 투어`,
@@ -44,6 +46,7 @@ const tourTitle ={
             '/images/add3/IMG_0085.jpeg',
         ],
         gallery:"8",
+        mapUrl:"https://www.google.com/maps/d/embed?mid=1c2YWFiySJD20oI5vfXtmwcgWynw-in8&ehbc=2E312F&noprof=1",
     },
     yarra :{
         title:`야라밸리 와이러니 투어`,
@@ -59,6 +62,7 @@ const tourTitle ={
             '/images/add3/IMG_0085.jpeg',
         ],
         gallery:"16",
+        mapUrl:"https://www.google.com/maps/d/embed?mid=1JSdSdayPYfV3IcUeWYeB1YWTJC9izq8&ehbc=2E312F&noprof=1",
     },
     soverin :{
         title:`소버린힐 & 발라렛 야생 동물 투어`,
@@ -74,6 +78,7 @@ const tourTitle ={
             '/images/add3/IMG_0085.jpeg',
         ],
         gallery:"24",
+        mapUrl:"https://www.google.com/maps/d/embed?mid=1_JyZKFlKE7IoLTvuel-WSPuiQytq7kU&ehbc=2E312F&noprof=1",
     },
     citytour :{
         title:`[멜버른 시티투어] 반나절에 돌아보는 멜버른 시티투어`,
@@ -89,6 +94,7 @@ const tourTitle ={
             '/images/add3/IMG_0085.jpeg',
         ],
         gallery:"12",
+        mapUrl:"https://www.google.com/maps/d/embed?mid=1pvZjPF2A4TaHiY0VJFjxfyX8-1ep2yQ&ehbc=2E312F&noprof=1",
     },
     // template
     // citytour :{

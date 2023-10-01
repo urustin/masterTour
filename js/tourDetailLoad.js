@@ -91,6 +91,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 photoBox.appendChild(img);
             }
         }
+        // map
+        const tour_googleMap = document.querySelector("#tour_googleMap");
+        tour_googleMap.src = tour.mapUrl;
         
 
         // if(imageBanner){

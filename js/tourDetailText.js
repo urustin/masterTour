@@ -422,7 +422,7 @@ const course = {
         title : `그레이트 오션 로드 코스 소개`,
         1:{
             title:`멜버른 시티 숙소픽업`,
-            img:`images/add7/tourPhotos/great/course/1.webp`,
+            img:`images/add7/tourPhotos/great/course/1.jpg`,
             caption:`투어 기사님이 숙소에서 픽업후 여행을 시작합니다.`,
         },
         2:{
@@ -480,7 +480,7 @@ const course = {
         },
         9:{
             title:`멜번 시티 숙소 도착 (Melbourne City)`,
-            img:`images/add7/tourPhotos/great/course/0.webp`,
+            img:`images/add7/tourPhotos/great/course/1.jpg`,
             caption:`약 12시간의 그레이트 오션 로드의 대장정을 마치고 안전하게 다시 숙소로 도착으로 이번 여행을 마무리 합니다.`,
         },
     },
@@ -489,42 +489,42 @@ const course = {
         title : `퍼핑빌리 증기기관차 일정소개`,
         1:{
             title:`만나는 장소`,
-            img:`images/add7/tourPhotos/puffin/course/멜번 시티 숙소.webp`,
+            img:`images/add7/tourPhotos/puffin/course/1.jpg`,
             caption:`숙소픽업후 투어진행합니다.\n멜버른 시티이외의 지역은 픽업비용이 발생할수 있습니다.`,
         },
         2:{
             title:`퍼핑빌리 (Puffing Billy) 증기기관차 탑승`,
-            img:`images/add7/tourPhotos/puffin/course/퍼핑 빌리 증기 기관차 탑승_edit.jpg`,
+            img:`images/add7/tourPhotos/puffin/course/2.jpg`,
             caption:`운행된지 100년이 넘은 증기기관차를 탈 수가 있는 곳 입니다.\n전 세계에서 가장 보존이 잘되있고 아직도 운행되고 있는 기관차, 퍼핑빌리 증기기관차입니다\n토마스와 친구들의 작가가 이 기차에서 아이디어를 얻었다고 알려져 있습니다.`,
         },
         3:{
             title:`그란츠 리저브 (Grants Reserve) 체험`,
-            img:`images/add7/tourPhotos/puffin/course/그란츠 리저브체험_edit.jpg`,
+            img:`images/add7/tourPhotos/puffin/course/3.jpg`,
             caption:`마치 중생대의 모습을 그대로 간직하고 있는 듯한 깊은 숲이 여러분들 눈앞에 펼쳐집니다.\n잠시나마 산림욕에 빠져볼수 있는 기회, 마스터 투어가 함께 합니다.\n`,
         },
         4:{
             title:`사사프라스 (Sassafras) 동화마을`,
-            img:`images/add7/tourPhotos/puffin/course/사사프라스 동화마을_edit.jpg`,
+            img:`images/add7/tourPhotos/puffin/course/4.jpg`,
             caption:`마을이 예쁘고 아담해서 붙여진 이름 사사프라스, 작지만 둘러볼 거리가 너무 많은 마을입니다.\n이곳 저곳 둘러보다보면 어느새 여러분들도 호주 지역주민이 된 듯한 착각에 빠질거에요.\n차잎가게, 양초가게, 빈티지가게 등을 둘러보다보면 시간이 너무 짧게 느껴지는 마을입니다.\n*기차시간과 시즌에 따라 일정이 다소 변경될 수 있음을 알려 드립니다.`,
         },
         5:{
             title:`마루 코알라 & 애니멀 파크 (Maru Koala & Animal Park)`,
-            img:`images/add7/tourPhotos/puffin/course/마루 코알라 _ 애니멀 파크_edit.jpg`,
+            img:`images/add7/tourPhotos/puffin/course/5.jpg`,
             caption:`필립 아일랜드 가는 중간에 잠시 쉬어가는 곳, 커피와 아이스크림이 맛있는 휴게소에요.\n호주를 대표하는 동물, 에뮤, 코알라, 딩코, 타즈마니아 데블을 만나볼수 있는 곳 , 작지만 알찬 동물원 마루 코알라파크 입니다.\n\n*입장료는 어른$30불/아이$16불입니다, 투어당일 현장에서 지불하시면 됩니다.`,
         },
         6:{
             title:`노비스 센터 (Nobbies Centre)`,
-            img:`images/add7/tourPhotos/puffin/course/노비스 센터_edit.jpg`,
+            img:`images/add7/tourPhotos/puffin/course/6.jpg`,
             caption:`해안길을 따라 만들어 놓은 산책길을 걷다 보면 저절로 힐링이 되는 그 곳,\n지는 석양이 너무 아름다운 그곳에서 연인과 가족들과 즐거운 추억을 만드세요.\n산책길을 걷다보면 우연치 않게 새끼 펭귄을 만날 수도 있는 곳 입니다.`,
         },
         7:{
             title:`펭귄 퍼레이드 (Penguin Parade)`,
-            img:`images/add7/tourPhotos/puffin/course/펭귄퍼레이드_edit.jpg`,
+            img:`images/add7/tourPhotos/puffin/course/7.jpg`,
             caption:`바다에서 집으로 무리지어오는 펭귄들의 모습이 마치 퍼레이드처럼 보인다고 해서 붙여진 이름이 바로 펭귄 퍼레이드입니다.\n동물원이 아닌 야생에서 만나는 남극의 요정 펭귄, 그 궁극의 귀여움을 만날수 있는 곳입니다.`,
         },
         8:{
             title:`멜번 시티 도착 (Melbourne City)`,
-            img:`images/add7/tourPhotos/puffin/course/멜번 시티 숙소.webp`,
+            img:`images/add7/tourPhotos/puffin/course/1.jpg`,
             caption:`동절기/하절기에 따라 숙소에 도착하느 시간이 달라 집니다 (오후8시~12시)`,
         },
 
@@ -533,17 +533,17 @@ const course = {
         title : ` 코스 소개`,
         1:{
             title:`만나는 장소`,
-            img:`images/add7/tourPhotos/mornington/course/멜번 시티 숙소.webp`,
+            img:`images/add7/tourPhotos/mornington/course/1.jpg`,
             caption:`숙소픽업후 일정을 진행합니다.(멜번 CBD출발 기준)\n온천까지는 시티 기준 약 1시간 30분 정도 소요가 됩니다.`,
         },
         2:{
             title:`모닝턴 핫 스프링( Peninsula Hot Springs)`,
-            img:`images/add7/tourPhotos/mornington/course/모닝턴 온천3_edit.jpg`,
+            img:`images/add7/tourPhotos/mornington/course/2.jpg`,
             caption:`Peninsula Hot Spring은 Victoria 주 최초의 천연 온천입니다.\n탕속으로 천연 온천물이 바로 흘러 들어가도록 설계되어 있으며, 미네랄이 풍부한 온천수로 온천만으로도 자연적 치유가 가능하다고 알려져 있습니다.\n지하 637 미터에서 추출한 50℃의 지하 광천수는 Peninsula Hot Spring에서 특별히 설계한 양수 방식을 통해\n다양한 온도의 온천탕(37℃~43℃)이 만들어져 있습니다.\n\n온천수에는 유황, 칼슘, 마그네슘, 칼륨 등의 성분이 포함되어\n피부미용과 노화방지에 효과적이라고 알려져 있습니다.`,
         },
         3:{
             title:`멜번 시티 도착 (Melbourne City)`,
-            img:`images/add7/tourPhotos/mornington/course/멜번 시티 숙소.webp`,
+            img:`images/add7/tourPhotos/mornington/course/1.jpg`,
             caption:`약 6시간의 온천투어 일정을 마치고 안전하게 숙소로 도착을 합니다.`,
         },
         // 4:{
@@ -581,27 +581,27 @@ const course = {
         title : ` 코스 소개`,
         1:{
             title:`만나는 장소`,
-            img:`images/add7/tourPhotos/yarra/course/멜번 시티 숙소.webp`,
+            img:`images/add7/tourPhotos/yarra/course/1.jpg`,
             caption:`숙소픽업 / 시티존이외의 지역은 픽업비용이 발생할수 있습니다.(멜번CBD기준)`,
         },
         2:{
             title:`예링 (Yering Station Winery)`,
-            img:`images/add7/tourPhotos/yarra/course/예링 스테이션_edit.jpg`,
+            img:`images/add7/tourPhotos/yarra/course/2.jpg`,
             caption:`스코트랜드 출신 Ryrie 형제가 이곳에 정착하면서 이 와이너리의 역사는 시작되었습니다.\n원주민의 이름에서 예링이란 이름을 따 왔으며 처음에 두종류의 포도를 심으면서 예링의 와인 이야기는 시작됩니다\n그 이후 몇번 소유주가 바뀌면서 새로운 변화가 시도 되었으며 지금은 세계적인 상을 14번이나 수상한 경력을 갖은 유명 와이너리로 거듭 태어났습니다.\n멜버른 시티에서 1시간정도면 도착하며 주변 풍경이 예쁘고 갤러리를 갖추고 있어 멜버니언들의 사랑을 듬뿍 받고 있습니다.\n( 시음비 약 $12발생합니다)`,
         },
         3:{
             title:`도메인샹동 (Domaine Chandon) - 프랑스에서 태어나고 호주에서 자란 스파클링 와인`,
-            img:`images/add7/tourPhotos/yarra/course/도메인샹돈_edit.jpg`,
+            img:`images/add7/tourPhotos/yarra/course/3.jpg`,
             caption:`야라밸리에 위치한 와이너리중 유명세를 치루고 있는 와이너리입니다.\n전세계적으로 유명한 샹동와인이 생산되는 전세계 3군데 와이너리중 하나입니다.\n그 주변의 자연경관과 와인박물관은 볼거리를 더해주고 있습니다.\n( 시음비 약 $10 발생합니다)`,
         },
         4:{
             title:`야라우드 와이너리 (Yarrawood Winery)- 최고의 화이트 와인과 레드와인`,
-            img:`images/add7/tourPhotos/yarra/course/야라 우드_edit.jpg`,
+            img:`images/add7/tourPhotos/yarra/course/4.jpg`,
             caption:`나자막한 힐에 위치하고 있어 전망이 좋고 합리적인 가격에 맛있는 점심식사를 여유롭게 즐길 수 있는 곳입니다.\n호주의 자연을 마음에 품고, 맛있는 음식과 함께 향기로운 와인에 취해보세요.`,
         },
         5:{
             title:`멜번 시티 도착 (Melbourne City)`,
-            img:`images/add7/tourPhotos/yarra/course/멜번 시티 숙소.webp`,
+            img:`images/add7/tourPhotos/yarra/course/1.jpg`,
             caption:`6~7시간 정도의 야라벨리의 와이러니 투어를 마치고 숙소로 안전하게 도착을 합니다.`,
         },
         // 6:{
@@ -630,32 +630,32 @@ const course = {
         title : `소버린 힐 코스 소개`,
         1:{
             title:`소버린힐`,
-            img:`images/add7/tourPhotos/soverin/course/멜번 시티 숙소.webp`,
+            img:`images/add7/tourPhotos/soverin/course/1.jpg`,
             caption:`그 옛날, 호주역사의 한 페이지를 장식했던 마을, 소버린힐\n엄청난 금이 발견되어 많은 사람들은 부자로 그리고 많은 사람들을 울고 웃게 만들었던 마을입니다.\n호주이민의 첫번째 큰 물결을 만들었으며 중국이민의 시작과 때를 같이했던 골드러시 시대를 열었던 곳입니다.`,
         },
         2:{
             title:`금괴만들기`,
-            img:`images/add7/tourPhotos/soverin/course/소버린힐 금괴 만들기_edit.jpg`,
+            img:`images/add7/tourPhotos/soverin/course/2.jpg`,
             caption:`매시간 시간 소버린힐에는 많은 이벤트들이 있습니다.\n그날의 스캐줄 따라 여러분들이 참여하고 싶은 행사에 자유롭게 참여하실수 있습니다\n그 중에 하나가 바로 이 금괴만들기 입니다.\n예전 방식대로 실제 3kg의 순금을 녹여 금괴를 만드는 과정을 보여줍니다.`,
         },
         3:{
             title:`마차타기`,
-            img:`images/add7/tourPhotos/soverin/course/소버린힐 마차 타기_edit.jpg`,
+            img:`images/add7/tourPhotos/soverin/course/3.jpg`,
             caption:`소버린힐 금광 민속촌을 마차를 타고 한바퀴 돌아 볼수 있는 코스 입니다.\n19세기 금광시절 광부들의 발이 되어 주었던 마차.\n마차를 타고 한바퀴 돌다보면 마치 서부시대의 한 장면이 떠오릅니다.\n(티켓은 입장료에 포함되어 있지 않으며 개별적으로 구매후 이용 가능합니다)`,
         },
         4:{
             title:`영국군 군사행렬`,
-            img:`images/add7/tourPhotos/soverin/course/소버린힐 군사행렬_edit.jpg`,
+            img:`images/add7/tourPhotos/soverin/course/4.jpg`,
             caption:`금을 찾아 고향을 떠나온 사람들,금을 찾은 사람들과 찾지 못한 사람들\n이해관계가 복잡한 이 금광촌 치안을 담당하고 있던 영국군인들은 많은 시비거리들을 중재하고 무엇보다 금을 지키는 막중한 임무를 지니고 있었습니다.`,
         },
         5:{
             title:`사금채취`,
-            img:`images/add7/tourPhotos/soverin/course/소버린힐 사금채취_edit.jpg`,
+            img:`images/add7/tourPhotos/soverin/course/5.jpg`,
             caption:`이 마을이 발견 당시 온통 강물이 금빛으로 빛나 눈을 뜰수 없을 정도 였다고 하니 어느정도인지 상상이 되시나요?\n이곳 원주민들은 그 금빛이 무서워 이곳을 멀리 했다는 이야기 있을 정도로 어마어마한 금이 있었던 곳입니다.\n여러분들도 여러분들의 행운을 시험해보세요.\n(채취하신 금은 가져가실 수 있습니다)`,
         },
         6:{
             title:`19세기 볼링장`,
-            img:`images/add7/tourPhotos/soverin/course/멜번 시티 숙소.webp`,
+            img:`images/add7/tourPhotos/soverin/course/6.jpg`,
             caption:`금광시절에 금을 찾던 광부들의 여가생활을 엿볼수 있는 곳입니다.\n그 당시 볼링은 어떻게 쳤을까요?\n예전에 런닝맨이 이곳을 찾아 한동안 뜨거운 반응을 불러 일으켰던 곳이기도 합니다.`,
         },
         
@@ -664,52 +664,52 @@ const course = {
         title : `코스 소개`,
         1:{
             title:`페더레이션 광장(Federation Square)`,
-            img:`images/add7/tourPhotos/citytour/course/페더레이션 광장_edit.jpg`,
+            img:`images/add7/tourPhotos/citytour/course/1.jpg`,
             caption:`멜버른 여행 1번지.\n광장 가운데 멜버른 비지터\n센터에서 각종 정보도 얻을 수 있다. 이곳을 기점으로 각종 투어들이 시작됩니다.`,
         },
         2:{
             title:`디그레이브스 스트리트 (Degraves Street)`,
-            img:`images/add7/tourPhotos/citytour/course/디그레이브 스트리트_edit.jpg`,
+            img:`images/add7/tourPhotos/citytour/course/2.jpg`,
             caption:`멜버른 골목 문화를 대표하는 거리입니다.\n\n레스토랑, 카페, 숍 어느 하나 모자란 곳이 없고, 그중에서도 컵 케이크로 유명하며 주인이 한국인인 리틀 컵케이크(Little Cupcakes), 고전적인 디자인의 다이어리와 수첩 등이 돋보이는 수제 문구류점 일파피로(Il papiro) 등이 인기.\n디그레이브스 에스프레소 바나 저널 카페 등도 줄서서 메뉴를 찾는 유명한 맛집입니다.`,
         },
         3:{
             title:`미사 거리 호시어 레인 (Hosier Lane)`,
-            img:`images/add7/tourPhotos/citytour/course/미사거리_edit.jpg`,
+            img:`images/add7/tourPhotos/citytour/course/3.jpg`,
             caption:`플린더스 스트리트에서 스완스톤과 러셀 스트리트 사이에 위치한 작은 골목. 무엇보다도 그래피티로 유명하지만 한국인들에게는 드라마 <미안하다 사랑한다>의 촬영 배경지로 널리 알려있습니다.\n멜버른에서도 소문난 레스토랑으로 꼽히는 모비다가 이 골목 입구(플린더스 스트리트 쪽)에 위치해 있습니다.`,
         },
         4:{
             title:`주립 도서관`,
-            img:`images/add7/tourPhotos/citytour/course/주립 도서관_edit.jpg`,
+            img:`images/add7/tourPhotos/citytour/course/4.jpg`,
             caption:`세계 최고의 도서관으로 손꼽히는 빅토리아 주립 도서관은 주 최고의 자료관이자 연구 도서관이며 세계 정보의 관문입니다. 도서관은 빅토리아 문화 생활의 과거와 현재를 보여주는 장 이며, 다양한 전시, 문화 프로그램, 서비스를 공동체에 제공하고 있습니다.\n1854년에 설립,존 배트맨의 일기, 네드 켈리의 갑옷, 윌리엄 스트리트 블랙 목요일과 같은 그림 등 빅토리아 주의 중요한 사회, 문화적 유산들을 소장하고 있습니다. `,
         },
         5:{
             title:`플린더스 스트리트 스테이션`,
-            img:`images/add7/tourPhotos/citytour/course/플린더스 역_edit.jpg`,
+            img:`images/add7/tourPhotos/citytour/course/5.jpg`,
             caption:`멜버른(Melbourne)을 처음 방문하는 여행자라면 누구나 멜버른의 아이콘이자 멜버른 ‘여행’의 상징이기도 한 플린린더스 스트리트 역(Flinders Street Station)건물을 이정표 삼아 멜버른 여행에 나섭니다. \n이 노란 건물은 멜버른의 ‘옛날’을 상징하기도 합니다. 1854년 세워진 멜버른 최초의 기차역으로 시내와 근교를 연결하는 중심 역이며 현재에는 하루 평균 11만명 이상 이 역을 이용하고 있습니다.`,
         },
         6:{
             title:`퀸빅토리아마켓`,
-            img:`images/add7/tourPhotos/citytour/course/퀸 빅토리아 마켓_edit.jpg`,
+            img:`images/add7/tourPhotos/citytour/course/6.jpg`,
             caption:`1878년 개장한 오랜 역사의 재래시장으로 퀸 빅 마켓 또는 빅 마켓으로 불린다. 육류와 해산물,채소 같은 신선한 식재료는 물론, 다양한 수공예품과 모카신 등의 가죽 잡화,악세사리 등을 저렴한 가격에 구입이 가능하다. 도넛 맛집인 아메리칸 도넛 키친이 자리 하고 있어서 다양한 체험이 가능한 곳이다.\n매주 월요일과 수요일은 휴무\n겨울에는 윈터 나이트 마켓이 야간에 개장을 하여 좀더 흥미로운 체험을 할수가 있습니다.`,
         },
         7:{
             title:`주의회 의사당(parliament of victoria)`,
-            img:`images/add7/tourPhotos/citytour/course/팔리아먼트 하우스_edit.jpg`,
+            img:`images/add7/tourPhotos/citytour/course/7.jpg`,
             caption:`주의회 의사당의 내부는 화려한 내부 인테리어를 갖춘 웅장한 건축물로 멜버른이 호주의 임시 수도였던 1901년 부터 1927년까지 호주 국회의사당으로 쓰여졌으며 지금은 빅토리아 주의회 의사당으로 사용이 되고 있다.`,
         },
         8:{
             title:`세인트 폴 대성당`,
-            img:`images/add7/tourPhotos/citytour/course/세인트 폴 대성당1_edit.jpg`,
+            img:`images/add7/tourPhotos/citytour/course/8.jpg`,
             caption:`멜버른 시내의 가장 중심이라고 할 수 있는 플린더스 역. 플린더스 역 건물을 등지고 서면 바로 보이는 세인트 폴 성당입니다. 커다란 첨탑과 함께 멜버른에서 가장 바쁜 거리 위에 서서 언제든 사람들을 맞이해 그들의 마음을 편안하게 해주는 곳입니다.\n구 세인트 폴 교구 교회가 있던 자리에, 1891년 세워진 이 성당은 르네상스의 대표적인 건축 양식인 고딕양식으로 지어진 성당입니다. 1880년 이전에는 목재 건물이었으나 1891년까지의 재건축으로 석조 건물로 된 이곳. 이전에는 멜버른 시내 서쪽에 위치한 세인트 제임스 성당이 가장 오래된 성당이었으나 1830년대 이후 멜버른 도시 전체가 다시 구축되고 발달하며 규모가 큰 성당이 필요해짐에 따라 이곳이 세워지게 되었습니다.`,
         },
         9:{
             title:`로얄 보타닉 가든`,
-            img:`images/add7/tourPhotos/citytour/course/보타닉 가든_edit.jpg`,
+            img:`images/add7/tourPhotos/citytour/course/9.jpg`,
             caption:`매년 19만 명이 넘는 방문객을 유치하는 멜버른 가든은 문화생활의 소중한 부분이며 풍부한 유산입니다. 아름다운 경치, 고요한 호수, 다양한 식물들이 모여 있는 정원은 끊임없는 새로운 발견과 기쁨의 장소임에 틀림 없습니다.\n\n잠시 도시에서 벗어나 아름다운 배경 속, 호주 원주민 유산 산책길이나 가든 디스커버리 투어를 즐겨 보셔도 좋습니다. 가든 익스플로러를 탑승하거나 고요한 오너맨틀 호수에서 배를 타는 것도 멋지겠지요.\n\n이 아름다운 정원은 동백나무, 열대우림식물, 다육식물과 선인장, 장미, 캘리포니아 종, 허브, 다년생 식물, 스커드, 남쪽 중국산 식물들과 같은 놀랍고 다양한 식물들의 집이다. 길포일 볼케이노(Guilfoyle's Volcano)는 방문객들에게 진귀한 보호 식물 지역을 선보일 것입니다. 정원들은 또한 토착 야생 생물의 자연 보호구역이기도 합니다.`,
         },
         10:{
             title:`세인트 킬다 비치`,
-            img:`images/add7/tourPhotos/citytour/course/세인트 킬다 해변_edit.jpg`,
+            img:`images/add7/tourPhotos/citytour/course/10.jpg`,
             caption:`약 2km에 걸쳐져 있는 새하얀 모래 사장이 길게 펼쳐진 해변, 트램으로 편리하게 올수 있게 잘 마련이 되어 있고 파도가 잔잔해 수영이나 스노클링 등 다양한 해양 액티비티를 즐기기에 좋은 해변입니다. 방파제 및 부두 시설 부근에 있는 세인트 킬다 피어에서는 야생 펭귄도 볼수 있는 스팟으로 유명한 곳입니다.`,
         },
     },

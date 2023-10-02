@@ -1716,6 +1716,8 @@ li.tg-rss a { background:#ff6600; }
 	height: auto;
 	opacity: 0.60;
 	display: block;
+	max-height: 190px;
+	object-fit: cover;
 }
 .tg-destination figure:hover a img{opacity:1;}
 .tg-destination figure figcaption {
@@ -1734,7 +1736,7 @@ li.tg-rss a { background:#ff6600; }
 	font-weight: 600;
 	line-height: 18px;
 }
-.tg-destination figure figcaption h2 a {color: #fff;}
+.tg-destination figure figcaption h2 a {color: #fff;line-height: 1.2;}
 .tg-destination figure figcaption .tg-description {}
 .tg-destination figure figcaption .tg-description p {
 	margin: 0;

@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // 가격 채우기
         const priceElement = document.querySelector('.tg-pricearea h4');
         const priceElement2 = document.querySelector('.tg-pricearea del');
-        if (priceElement) priceElement.innerHTML = `${tour.price.length>=4?String(tour.price).slice(0,1)+","+String(tour.price).slice(1):tour.price}~<sub>/ 정확한 가격은 문의바랍니다</sub>`;
+        if (priceElement) priceElement.innerHTML = `$${tour.price.length>=4?String(tour.price).slice(0,1)+","+String(tour.price).slice(1):tour.price}~<sub>/ 정확한 가격은 문의바랍니다</sub>`;
         if (priceElement2) priceElement2.innerHTML = `$${tour.price.length>=4?String(tour.price*1.5).slice(0,1)+","+String(tour.price*1.5).slice(1):tour.price*1.5}`;
         // Create <p> element and set tour description
         const descriptionElement = document.createElement('p');
